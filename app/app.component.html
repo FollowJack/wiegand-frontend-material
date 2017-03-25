@@ -1,0 +1,221 @@
+<navbar-component></navbar-component>
+
+<router-outlet></router-outlet>
+
+
+<div class="container">
+    <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+                    <h5 class="center">Speeds up development</h5>
+
+                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that
+                        incorporate our custom components. Additionally, we refined animations and transitions to
+                        provide a smoother experience for developers.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+                    <h5 class="center">User Experience Focused</h5>
+
+                    <p class="light">By utilizing elements and principles of Material Design, we were able to create a
+                        framework that incorporates components and animations that provide more feedback to users.
+                        Additionally, a single underlying responsive system across all platforms allow for a more
+                        unified user experience.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+                    <h5 class="center">Easy to work with</h5>
+
+                    <p class="light">We have provided detailed documentation as well as specific code examples to help
+                        new users get started. We are also always open to feedback and can answer any questions a user
+                        may have about Materialize.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+
+    <div class="section">
+
+    </div>
+</div>
+
+<footer class="page-footer orange">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Company Bio</h5>
+                <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's
+                    our full time job. Any amount would help support and continue development on this project and is
+                    greatly appreciated.</p>
+
+
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Settings</h5>
+                <ul>
+                    <li><a class="white-text" href="#!">Link 1</a></li>
+                    <li><a class="white-text" href="#!">Link 2</a></li>
+                    <li><a class="white-text" href="#!">Link 3</a></li>
+                    <li><a class="white-text" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Connect</h5>
+                <ul>
+                    <li><a class="white-text" href="#!">Link 1</a></li>
+                    <li><a class="white-text" href="#!">Link 2</a></li>
+                    <li><a class="white-text" href="#!">Link 3</a></li>
+                    <li><a class="white-text" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- header top bar -->
+<<!--div class="header_top">
+  <div class="container">
+
+    <div class="logo">
+      <a routerLink="/" routerLinkActive="active"><img [src]="images.logo" alt=""
+                                                       style="width:55%;"></a>
+    </div>
+
+    <!-- topmenu
+    <nav id="topmenu" class="clearfix">
+      <ul class="dropdown">
+        <li class="menu-level-0 current-menu-ancestor">
+          <a routerLink="/unsere-autos" routerLinkActive="active"><span>Unsere Autos</span></a>
+        </li>
+        <li class="menu-level-0"><a routerLink="/kontakt" routerLinkActive="active"><span>Kontakt</span></a></li>
+        <li class="menu-level-0 last"><a routerLink="/anfahrt" routerLinkActive="active"><span>Anfahrt</span></a></li>
+      </ul>
+    </nav>
+    <nav id="topmenu-folded" class="clearfix" style="display:none; margin-top:20px;">
+      <div class="styled-select white">
+        <select id="topm-select" (change)="navigateTo($event.target.value)" style="width: 105%;">
+          <option value="unsere-autos">Unsere Autos</option>
+          <option value="kontakt">Kontakt</option>
+          <option value="anfahrt">Anfahrt</option>
+        </select>
+      </div>
+    </nav>
+    <!--/ topmenu
+  </div>
+</div>
+<!--/ header top bar
+
+<router-outlet></router-outlet>
+
+<div class="footer">
+  <div class="container clearfix">
+
+    <!--<div class="f_col f_col_1">
+      <h3>Vehicles:</h3>
+      <ul>
+        <li><a href="#"><span>Motorbikes</span></a></li>
+        <li><a href="#"><span>Compacts</span></a></li>
+        <li><a href="#"><span>Sedans</span></a></li>
+        <li><a href="#"><span>4x4 SUVs</span></a></li>
+        <li><a href="#"><span>Pickups</span></a></li>
+        <li><a href="#"><span>Vans & Trucks</span></a></li>
+      </ul>
+    </div>-->
+<!--/ footer col 1
+
+
+<div class="f_col f_col_4">
+  <h3>Unser Autohaus</h3>
+  <div class="footer_address">
+    <div class="address">
+      Heidelbergerstrasse 30<br>
+      68519 Viernheim<br>
+      Deutschland<br>
+    </div>
+    <div class="hours">
+      Mo. - Fr.: 9:30 - 19:00 Uhr<br>
+      Sa.: 9:30 - 14:00 Uhr
+    </div>
+    <a routerLink="/anfahrt" class="notice"></a>
+  </div>
+  <div class="footer_map" style="background:url('/app/images/footer/777.png'); max-width:100%;
+max-height:100%;height:100%"><a routerLink="/anfahrt" class="amap"></a></div>
+</div>
+<!--/ footer col 4
+<div class="f_col f_col_4">
+  <h3>Bewertung</h3>
+  <div class="textwidget">
+    <div class="sph">
+      <div style="width:100%;cursor: pointer;">
+        <a rel="nofollow" style="text-decoration:none;"
+           href="http://haendler.autoscout24.de/reiner-wiegand"
+           target="_blank">
+          <div
+            style="border: 1px solid #CCCCCC;background-color: #E8E5E0; overflow:hidden; padding: 9px 9px;color: #003468; font: 12px/18px Verdana,Helvetica,Arial,sans-serif;">
+            <div>
+              <div style="float:left;"><img alt="logo"
+                                            src="//s.autoscout24.net/Images/as24_logo_linkplus_transp.png"></div>
+              <div style="overflow:hidden; padding-left: 9px;top:-1px; position: relative;line-height: 15px">
+                Ausgezeichnet<br><span style="font-size: 10px;">von AutoScout24-Nutzern</span></div>
+            </div>
+            <div
+              style="border: 1px solid #CCCCCC;background-color: white; padding: 15px 18px 18px 18px;width: auto; margin-top: 9px">
+              <div style="font-weight: bold !important; color: black; word-wrap: break-word;text-align: center">
+                Wiegand Automobile
+              </div>
+              <div
+                style="margin-top: 6px;color: #335D86; font: bold 32px/39px Tahoma,Geneva,Kalimati,sans-serif;text-align: center">
+                4,4
+              </div>
+              <div style="margin-top: 9px;text-align: center"><span
+                style="display:inline-block;vertical-align: top;width: 20px;height: 20px;background: transparent url(//s.autoscout24.net/UI/Images/shared/icons/rating_stars_L_sprite.png) no-repeat center 0;"></span>&nbsp;<span
+                style="display:inline-block;vertical-align: top;width: 20px;height: 20px;background: transparent url(//s.autoscout24.net/UI/Images/shared/icons/rating_stars_L_sprite.png) no-repeat center 0;"></span>&nbsp;<span
+                style="display:inline-block;vertical-align: top;width: 20px;height: 20px;background: transparent url(//s.autoscout24.net/UI/Images/shared/icons/rating_stars_L_sprite.png) no-repeat center 0;"></span>&nbsp;<span
+                style="display:inline-block;vertical-align: top;width: 20px;height: 20px;background: transparent url(//s.autoscout24.net/UI/Images/shared/icons/rating_stars_L_sprite.png) no-repeat center 0;"></span>&nbsp;<span
+                style="display:inline-block;vertical-align: top;width: 20px;height: 20px;background: transparent url(//s.autoscout24.net/UI/Images/shared/icons/rating_stars_L_sprite.png) no-repeat center; background-position:0 -40px"></span>
+              </div>
+            </div>
+          </div>
+        </a></div>
+    </div>
+    <script type="text/javascript"
+            src="http://haendler.autoscout24.de/RatingSnippet/reiner-wiegand?u=h&amp;w=250"></script>
+    <br></div>
+</div>
+<!--/ footer col 3
+<div class="clear"></div>
+
+<div class="footer_social">
+  <div class="social_inner">
+    <div class="footer_contacts">
+      <span class="phone">+49 (0) 6204 6080716</span>
+      <span class="email">wiegand-automobile@mobile.de</span>
+    </div>
+
+    <div class="copyright">
+      <a routerLink="/impressum" class="link_white">Impressum</a>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+-->

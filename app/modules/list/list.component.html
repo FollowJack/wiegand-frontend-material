@@ -1,0 +1,261 @@
+<image-slider-component></image-slider-component>
+<br>
+<br>
+<div class="container">
+    <!-- filters -->
+    <div class="row">
+        <!-- category -->
+        <div class="input-field col s6 m3">
+            <select>
+                <option value="" disabled selected>Alle</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+            <label>Wähle deine Fahrzeugkategorie:</label>
+        </div>
+        <!-- brand -->
+        <div class="input-field col s6 m3">
+            <select>
+                <option value="" disabled selected>Alle</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+            <label>Wähle deine Marke:</label>
+        </div>
+        <!-- model -->
+        <div class="input-field col s6 m3">
+            <select>
+                <option value="" disabled selected>Alle</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+            <label>Wähle dein Modell:</label>
+        </div>
+        <!-- price -->
+        <div class="input-field col s6 m3">
+            <div id="price-range" style="margin-top: 20px;"></div>
+            <label style="position: absolute; top: -14px;font-size: 0.8rem;">Wähle dein Preisspektrum:</label>
+        </div>
+
+        <!--<div id="range-input" class="noUi-target noUi-ltr noUi-horizontal">
+            <div class="noUi-base">
+                <div class="noUi-origin" style="left: 20%;">
+                    <div class="noUi-handle noUi-handle-lower" data-handle="0" style="z-index: 5;">
+                        <div class="noUi-tooltip"><span>20</span></div>
+                    </div>
+                </div>
+                <div class="noUi-connect" style="left: 20%; right: 20%;"></div>
+                <div class="noUi-origin" style="left: 80%;">
+                    <div class="noUi-handle noUi-handle-upper" data-handle="1" style="z-index: 4;"><
+                        div class="noUi-tooltip"><span>80</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    </div>
+</div>
+<!-- header slider
+<div class="fullwidthbanner-container">
+  <div class="fullwidthbanner">
+    <ul>
+      <li data-transition="fade" data-slotamount="1" data-masterspeed="500">
+        <img [src]="images.headline1" data-fullwidthcentering="on">
+
+        <div class="caption sft text_line" data-x="10" data-y="190" data-speed="900" data-start="800"
+             data-easing="easeOutExpo"></div>
+        <div class="caption sfb text_line" data-x="10" data-y="300" data-speed="900" data-start="800"
+             data-easing="easeOutExpo"></div>
+        <div class="caption sfl white_text big_title" data-x="10" data-y="220" data-speed="900" data-start="500"
+             data-easing="easeOutExpo">
+          <a href="#"><strong>WIR BERATEN SIE GERNE</strong></a>
+        </div>
+        <div class="caption sfr white_text subtitle" data-x="10" data-y="257" data-speed="900" data-start="700"
+             data-easing="easeOutExpo">
+          <span>Autokauf, Finanzierung bis zur </span>
+        </div>
+
+      </li>
+      <!--<li data-transition="fade" data-slotamount="3" data-masterspeed="500">
+        <img src="images/header/6er.jpg" data-fullwidthcentering="on">
+
+        <div class="caption sft text_line" data-x="550" data-y="250" data-speed="900" data-start="800" data-easing="easeOutExpo"></div>
+        <div class="caption sfb text_line" data-x="550" data-y="360" data-speed="900" data-start="800" data-easing="easeOutExpo"></div>
+
+        <div class="caption sfr white_text big_title" data-x="550" data-y="280"data-speed="900" data-start="500" data-easing="easeOutExpo">
+          <a href="#"><strong>INZAHLUNGSNAME</strong></a>
+        </div>
+        <div class="caption sfl white_text subtitle" data-x="550" data-y="317" data-speed="900" data-start="700" data-easing="easeOutExpo">
+          Am gebrauchten <span>verdienen</span>
+        </div>
+      </li>-->
+<!--<li data-transition="fade" data-slotamount="5" data-masterspeed="500">
+  <img src="images/header/bbb.jpg" data-fullwidthcentering="on">
+
+  <div class="caption sft text_line" data-x="10" data-y="190" data-speed="900" data-start="800" data-easing="easeOutExpo"></div>
+  <div class="caption sfb text_line" data-x="10" data-y="300" data-speed="900" data-start="800" data-easing="easeOutExpo"></div>
+
+  <div class="caption sft white_text big_title" data-x="10" data-y="220" data-speed="900" data-start="500" data-easing="easeOutExpo">
+    <a href="#"><strong>FINANZIERUNG</strong></a>
+  </div>
+  <div class="caption sfb white_text subtitle" data-x="10" data-y="257" data-speed="900" data-start="700" data-easing="easeOutExpo">
+    Wir beraten <span>Sie</span> gerne
+  </div>
+</li>-->
+<!--<li data-transition="fade" data-slotamount="7" data-masterspeed="500">
+  <img src="images/header/ddd.jpg" data-fullwidthcentering="on">
+
+  <div class="caption sft text_line" data-x="550" data-y="250" data-speed="900" data-start="800" data-easing="easeOutExpo"></div>
+  <div class="caption sfb text_line" data-x="550" data-y="360" data-speed="900" data-start="800" data-easing="easeOutExpo"></div>
+
+  <div class="caption sft white_text big_title" data-x="550" data-y="280" data-speed="900" data-start="500" data-easing="easeOutExpo">
+    <a href="#"><strong>VIELE AUTOMARKEN</strong></a>
+  </div>
+  <div class="caption sfb white_text subtitle" data-x="550" data-y="317" data-speed="900" data-start="700" data-easing="easeOutExpo">
+    Mehr als <span>100</span> Autos zu deiner Auswahl
+  </div>
+</li>
+</ul>
+</div>
+</div>
+<!--/ header slider
+
+<!-- search
+<div class="middle_row row_white search_row full_search">
+<div class="container">
+<form action="#" class="search_form clearfix">
+
+<div class="row field_select">
+  <label class="label_title">Kategorie:</label>
+
+  <div class="styled-select">
+    <select id="category" name="category" [(ngModel)]="filter.category"
+            (change)="onCategorySelect()">
+      <option *ngFor="let category of dropdown.categories | keys" [value]="category.value.value">
+        {{category.key}} ({{category.value.amount}})
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="row field_select">
+  <label class="label_title">Marke:</label>
+  <div class="styled-select">
+    <select name="brand" [(ngModel)]="filter.brand" (change)="onBrandSelect()">
+      <option *ngFor="let brand of dropdown.brands | keys" [value]="brand.value.value">
+        {{brand.key}} ({{brand.value.amount}})
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="row field_select">
+  <label class="label_title">Model:</label>
+  <div class="disabled-btn">
+
+    <div class="styled-select">
+      <select name="model" [(ngModel)]="filter.model" [disabled]="isModelDisabled">
+        <option *ngFor="let model of dropdown.models | keys" [value]="model.value.value">
+          {{model.key}} ({{model.value.amount}})
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="row field_select">
+  <label class="label_title2">Preisspanne:</label>
+  <div class="range-slider">
+    <input id="price_range" type="text" name="price_range" value="0;80000">
+  </div>
+  <div class="clear"></div>
+</div>
+
+</form>
+
+</div>
+</div>
+
+<!--/ search
+<div class="middle_row row_light_gray">
+<div class="container clearfix">
+
+
+<button class="btn_white" (click)="onSort('lastModifiedSince')">
+<span *ngIf="fieldToSort === '-lastModifiedSince'" class="arrow-down"> </span>
+<span *ngIf="fieldToSort === 'lastModifiedSince'" class="arrow-up"> </span> Einstellungsdatum
+</button>
+<button class="btn_white" (click)="onSort('consumerPriceAmount')">
+<span *ngIf="fieldToSort === '-consumerPriceAmount'" class="arrow-down"> </span>
+<span *ngIf="fieldToSort === 'consumerPriceAmount'" class="arrow-up"> </span> Preis
+</button>
+<button class="btn_white" (click)="onSort('firstRegistration')">
+<span *ngIf="fieldToSort === '-firstRegistration'" class="arrow-down"> </span>
+<span *ngIf="fieldToSort === 'firstRegistration'" class="arrow-up"> </span> Erstzulassung
+</button>
+<button class="btn_white" (click)="onSort('mileAge')">
+<span *ngIf="fieldToSort === '-mileAge'" class="arrow-down"> </span>
+<span *ngIf="fieldToSort === 'mileAge'" class="arrow-up"> </span> Kilometer
+</button>
+
+
+<input class="inputField" placeholder="Suche dein Auto" type="text" name="search" [(ngModel)]="filter.freeText"
+     style="width: 95%;
+background: white;
+margin-bottom: 36px;">
+
+<!--<h1>Cindy ist die Beste, Deniel <3</h1>-->
+
+<!--{{vehicle.brandDescription}} - {{vehicle.modelDescription}} - {{vehicle.consumerPriceAmount}} - {{vehicle.category}}
+
+<!-- offers list
+<div class="offer_list clearfix">
+
+
+  <pagination-controls (pageChange)="page = $event" id="1"
+                       previousLabel="Zurück"
+                       nextLabel="Vor"
+                       maxSize="5"
+                       directionLinks="true"
+                       autoHide="true" style="text-align: center">
+  </pagination-controls>
+
+  <div class="offer_item clearfix"
+       *ngFor="let vehicle of vehicles | FilterVehiclePipe: filter.category: filter.brand : filter.model : filter.minPrice : filter.maxPrice |SearchVehiclePipe: filter.freeText | FilterVehiclePipe: filter.category: filter.brand : filter.model : filter.minPrice : filter.maxPrice | orderBy: fieldToSort | paginate: {itemsPerPage: 10, currentPage:page, id: '1'}; let i = index"
+       (click)="onVehicleSelect(vehicle)">
+    <div class="offer_image"><img [src]="vehicle.vehicleImage.murl" alt=""></div>
+    <div class="offer_aside">
+      <h2>{{vehicle.brandDescription}} {{vehicle.modelDescription}}</h2>
+      <div class="offer_descr">
+        <p>{{vehicle.category}}
+          {{vehicle.engineSpecifics.power}}kW ({{vehicle.engineSpecifics.ps}} PS),
+          {{vehicle.engineSpecifics.fuelType}},
+          {{vehicle.engineSpecifics.gearBox}}, {{vehicle.engineSpecifics.airConditioning}}, Kraftstoffverbr.
+          komb.:
+          ca.
+          {{vehicle.engineSpecifics.emissionFuelConsumption}}/100 km
+          g/km</p>
+      </div>
+      <div class="offer_data">
+        <div class="offer_price">{{vehicle.consumerPriceAmount | number : '1.0-0' }} €</div>
+        <span class="offer_miliage">{{vehicle.engineSpecifics.mileAge | number : '1.0-0' }} KM</span>
+        <span class="offer_regist">EZ {{vehicle.engineSpecifics.firstRegistration | date: 'MM/yyyy'}}</span>
+      </div>
+    </div>
+  </div>
+
+  <pagination-controls (pageChange)="page = $event" id="1"
+                       previousLabel="Zurück"
+                       nextLabel="Vor"
+                       maxSize="5"
+                       directionLinks="true"
+                       autoHide="true" style="text-align: center">
+  </pagination-controls>
+
+</div>
+</div>
+</div>
+-->

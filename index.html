@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <base href="/">
+
+    <title>Wiegand Automobile Viernheim</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="FollowJack">
+    <meta name="description"
+          content="Auto kaufen ganz einfach von der Probefahrt bis zur Anmeldung! » Wir unterstützen dich! » über 100 wechselnde Autos ✓ Finanzierung möglich ✓ Am alten Auto gleich mitverdienen">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.de"></script>
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="node_modules/angular2-logger/bundles/angular2-logger.sys.js"></script>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="lib/noUiSlider/nouislider.css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+<!-- Page preloader -->
+<div id="loading">
+    <div id="preloader">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<my-app>Lade...</my-app>
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="lib/materialize.js"></script>
+<script src="lib/noUiSlider/nouislider.js"></script>
+<script src="systemjs.config.js"></script>
+<!-- google analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-92239688-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<script>
+    System.import('app/main.js').catch(function (err) {
+        console.error(err);
+    });
+</script>
+
+</body>
+</html>
