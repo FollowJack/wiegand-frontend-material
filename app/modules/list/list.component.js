@@ -46,8 +46,8 @@ var ListComponent = (function () {
         this.vehicles = [];
         this.fieldToSort = "lastModifiedSince";
         this._logger.debug('ListComponent - constructor - initialized');
-        //this.loadVehiclesAndDropdowns();
-        //this.loadDropdowns();
+        this.loadVehiclesAndDropdowns();
+        this.loadDropdowns();
     }
     ListComponent.prototype.ngAfterViewInit = function () {
         this._logger.debug('ListComponent - ngAfterViewInit');
@@ -56,120 +56,108 @@ var ListComponent = (function () {
         //this.loadSlider();
         //this.loadCarousel();
     };
-    /*private loadVehiclesAndDropdowns() {
-     this._logger.debug('ListComponent - loadVehiclesAndDropdowns');
-     this._service.getVehicles().subscribe(
-     (data: any) => {
-     this._logger.debug('ListComponent - loadVehiclesAndDropdowns - subscribed');
-     this.vehicles = data;
-     //this._changeDetectorRef.detectChanges()
-     },
-     (error: any) => {
-     this._logger.debug("Error with while downloading cars: " + error);
-     }
-     );
-     }
-
-     private loadDropdowns() {
-     this._logger.debug('ListComponent - loadDropdowns');
-     this.dropdown = this._service.getDropdown();
-     }
-
-     private onSort(fieldToSort: any) {
-
-     if (fieldToSort === this.fieldToSort) {
-     this.fieldToSort = "-" + this.fieldToSort;
-     return;
-     }
-
-     this.fieldToSort = fieldToSort;
-     }
-
-     private onVehicleSelect(vehicle: any) {
-     this._logger.debug('ListComponent - onVehicleSelect - selected id: ' + vehicle.id);
-     this._router.navigate(['/unsere-autos', vehicle.id]);
-     //analyze google select events
-     this._analyticsService.sendVehicle(vehicle);
-     //brand : car name : price
-     }
-
-     private onCategorySelect() {
-     this._logger.debug('ListComponent - onCategorySelect - selected category: ' + this.filter.category);
-
-     this.resetSearch();
-     // case category not set then show default
-     if (this.filter.category == "") {
-     this.dropdown.brands = this.dropdown.categories[this.ANY_DEFAULT];
-     this.isModelDisabled = true;
-     } else { // show preselected category
-     this.dropdown.brands = this.dropdown.categories[this.filter.category];
-     // disable when brand is also default
-     if (this.filter.brand == "") {
-     this.isModelDisabled = false;
-     }
-     // disable model dropdown
-     }
-     // reset filter
-     this.filter.brand = "";
-     this.filter.model = "";
-     // reset brand
-     this.dropdown.brands[this.ANY_DEFAULT] = {};
-     this.dropdown.brands[this.ANY_DEFAULT].value = "";
-     this.dropdown.models = [];
-     // reset amount of category
-     if (this.filter.category == "") {
-     this.dropdown.brands[this.ANY_DEFAULT].amount = this.dropdown.categories[this.ANY_DEFAULT].amount;
-     } else {
-     this.dropdown.brands[this.ANY_DEFAULT].amount = this.dropdown.categories[this.filter.category].amount;
-     }
-     }
-
-     private resetSearch() {
-     this.filter.freeText = "";
-     }
-
-     private onBrandSelect() {
-     this._logger.debug('ListComponent - onBrandSelect - selected brand: ' + this.filter.brand);
-     // reset model
-
-     if (this.filter.brand == "") {
-     // enable model dropdown
-     this.isModelDisabled = true;
-     // category is empty
-     if (this.filter.category == "") {
-     this.dropdown.models = this.dropdown.categories[this.ANY_DEFAULT][this.ANY_DEFAULT];
-     this.dropdown.models[this.ANY_DEFAULT] = {};
-     //this.dropdown.models[this.ANY_DEFAULT].value = "";
-     //this.dropdown.models[this.ANY_DEFAULT].amount = this.dropdown.categories[this.ANY_DEFAULT][this.ANY_DEFAULT].amount;
-     } else { // category is set
-     this.dropdown.models = this.dropdown.categories[this.filter.category][this.ANY_DEFAULT];
-     this.dropdown.models[this.ANY_DEFAULT] = {};
-     this.dropdown.models[this.ANY_DEFAULT].value = "";
-     this.dropdown.models[this.ANY_DEFAULT].amount = this.dropdown.categories[this.filter.category][this.ANY_DEFAULT].amount;
-     }
-     } else { // brand is set
-     // enable model dropdown
-     this.isModelDisabled = false;
-     // reset brand
-
-     if (this.filter.category == "") {
-     //this.filter.model = "";
-     this.dropdown.models = this.dropdown.categories[this.ANY_DEFAULT][this.filter.brand];
-     this.dropdown.models[this.ANY_DEFAULT] = {};
-     this.dropdown.models[this.ANY_DEFAULT].value = "";
-     this.dropdown.models[this.ANY_DEFAULT].amount = this.dropdown.categories[this.ANY_DEFAULT][this.filter.brand].amount;
-     } else {
-     this.dropdown.models = this.dropdown.categories[this.filter.category][this.filter.brand];
-     this.dropdown.models[this.ANY_DEFAULT] = {};
-     this.dropdown.models[this.ANY_DEFAULT].value = "";
-     this.dropdown.models[this.ANY_DEFAULT].amount = this.dropdown.categories[this.filter.category][this.filter.brand].amount;
-     }
-     }
-     // add default to the end
-     this.filter.model = "";
-
-     }
-
+    ListComponent.prototype.loadVehiclesAndDropdowns = function () {
+        var _this = this;
+        this._logger.debug('ListComponent - loadVehiclesAndDropdowns');
+        this._service.getVehicles().subscribe(function (data) {
+            _this._logger.debug('ListComponent - loadVehiclesAndDropdowns - subscribed');
+            _this.vehicles = data;
+            //this._changeDetectorRef.detectChanges()
+        }, function (error) {
+            _this._logger.debug("Error with while downloading cars: " + error);
+        });
+    };
+    ListComponent.prototype.loadDropdowns = function () {
+        this._logger.debug('ListComponent - loadDropdowns');
+        this.dropdown = this._service.getDropdown();
+    };
+    ListComponent.prototype.onSort = function (fieldToSort) {
+        if (fieldToSort === this.fieldToSort) {
+            this.fieldToSort = "-" + this.fieldToSort;
+            return;
+        }
+        this.fieldToSort = fieldToSort;
+    };
+    ListComponent.prototype.onVehicleSelect = function (vehicle) {
+        this._logger.debug('ListComponent - onVehicleSelect - selected id: ' + vehicle.id);
+        this._router.navigate(['/unsere-autos', vehicle.id]);
+        //analyze google select events
+        this._analyticsService.sendVehicle(vehicle);
+        //brand : car name : price
+    };
+    ListComponent.prototype.onCategorySelect = function () {
+        this._logger.debug('ListComponent - onCategorySelect - selected category: ' + this.filter.category);
+        this.resetSearch();
+        // case category not set then show default
+        if (this.filter.category == "") {
+            this.dropdown.brands = this.dropdown.categories[this.ANY_DEFAULT];
+            this.isModelDisabled = true;
+        }
+        else {
+            this.dropdown.brands = this.dropdown.categories[this.filter.category];
+            // disable when brand is also default
+            if (this.filter.brand == "") {
+                this.isModelDisabled = false;
+            }
+        }
+        // reset filter
+        this.filter.brand = "";
+        this.filter.model = "";
+        // reset brand
+        this.dropdown.brands[this.ANY_DEFAULT] = {};
+        this.dropdown.brands[this.ANY_DEFAULT].value = "";
+        this.dropdown.models = [];
+        // reset amount of category
+        if (this.filter.category == "") {
+            this.dropdown.brands[this.ANY_DEFAULT].amount = this.dropdown.categories[this.ANY_DEFAULT].amount;
+        }
+        else {
+            this.dropdown.brands[this.ANY_DEFAULT].amount = this.dropdown.categories[this.filter.category].amount;
+        }
+    };
+    ListComponent.prototype.resetSearch = function () {
+        this.filter.freeText = "";
+    };
+    ListComponent.prototype.onBrandSelect = function () {
+        this._logger.debug('ListComponent - onBrandSelect - selected brand: ' + this.filter.brand);
+        // reset model
+        if (this.filter.brand == "") {
+            // enable model dropdown
+            this.isModelDisabled = true;
+            // category is empty
+            if (this.filter.category == "") {
+                this.dropdown.models = this.dropdown.categories[this.ANY_DEFAULT][this.ANY_DEFAULT];
+                this.dropdown.models[this.ANY_DEFAULT] = {};
+            }
+            else {
+                this.dropdown.models = this.dropdown.categories[this.filter.category][this.ANY_DEFAULT];
+                this.dropdown.models[this.ANY_DEFAULT] = {};
+                this.dropdown.models[this.ANY_DEFAULT].value = "";
+                this.dropdown.models[this.ANY_DEFAULT].amount = this.dropdown.categories[this.filter.category][this.ANY_DEFAULT].amount;
+            }
+        }
+        else {
+            // enable model dropdown
+            this.isModelDisabled = false;
+            // reset brand
+            if (this.filter.category == "") {
+                //this.filter.model = "";
+                this.dropdown.models = this.dropdown.categories[this.ANY_DEFAULT][this.filter.brand];
+                this.dropdown.models[this.ANY_DEFAULT] = {};
+                this.dropdown.models[this.ANY_DEFAULT].value = "";
+                this.dropdown.models[this.ANY_DEFAULT].amount = this.dropdown.categories[this.ANY_DEFAULT][this.filter.brand].amount;
+            }
+            else {
+                this.dropdown.models = this.dropdown.categories[this.filter.category][this.filter.brand];
+                this.dropdown.models[this.ANY_DEFAULT] = {};
+                this.dropdown.models[this.ANY_DEFAULT].value = "";
+                this.dropdown.models[this.ANY_DEFAULT].amount = this.dropdown.categories[this.filter.category][this.filter.brand].amount;
+            }
+        }
+        // add default to the end
+        this.filter.model = "";
+    };
+    /*
      private loadSlider() {
      var filter = this.filter;
      this._logger.debug('ListComponent - loadSlider');

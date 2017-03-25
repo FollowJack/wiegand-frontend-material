@@ -35,7 +35,8 @@ var VehicleService = (function () {
                 17501, 20001, 22501, 25001, 27501, 30001,
                 35001, 40001, 45001, 50001, 55001, 60001],
         };
-        this.BACKEND_URL = "http://automobile-wiegand.de/api/api/vehicle";
+        //private BACKEND_URL = "http://automobile-wiegand.de/api/api/vehicle";
+        this.BACKEND_URL = "http://localhost:8080/api/vehicle";
         this._logger.debug('VehicleService - constructor - initialized');
     }
     VehicleService.prototype.getDropdown = function () {

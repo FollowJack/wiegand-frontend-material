@@ -27,7 +27,8 @@ export class VehicleService {
   };
 
   private vehicles: any;
-  private BACKEND_URL = "http://automobile-wiegand.de/api/api/vehicle";
+  //private BACKEND_URL = "http://automobile-wiegand.de/api/api/vehicle";
+  private BACKEND_URL = "http://localhost:8080/api/vehicle";
 
   constructor(private _logger: Logger,
               private http: Http) {

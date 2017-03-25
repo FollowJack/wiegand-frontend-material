@@ -27,6 +27,7 @@ import {SearchVehiclePipe} from "./modules/list/list.pipe.search";
 import {SortPipe} from "./modules/list/list.pipe.sort";
 import {NavbarComponent} from "./modules/navbar/navbar.component";
 import {ImageSliderComponent} from "./modules/list/image-slider/image.slider.component";
+import {TruncatePipe} from "./util/app.pipe.truncate";
 
 @NgModule({
   imports: [BrowserModule,
@@ -35,7 +36,7 @@ import {ImageSliderComponent} from "./modules/list/image-slider/image.slider.com
   declarations: [AppComponent, ListComponent, NavbarComponent, ImageSliderComponent,
     DetailComponent, ContactComponent,
     LocationComponent, ImprintComponent,
-    FilterVehiclePipe, KeysPipe, SearchVehiclePipe, SortPipe
+    FilterVehiclePipe, KeysPipe, SearchVehiclePipe, SortPipe, TruncatePipe
   ], providers: [Logger,
     ERROR_LOGGER_PROVIDERS,
     WARN_LOGGER_PROVIDERS,

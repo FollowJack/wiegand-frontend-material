@@ -34,6 +34,7 @@ var list_pipe_search_1 = require("./modules/list/list.pipe.search");
 var list_pipe_sort_1 = require("./modules/list/list.pipe.sort");
 var navbar_component_1 = require("./modules/navbar/navbar.component");
 var image_slider_component_1 = require("./modules/list/image-slider/image.slider.component");
+var app_pipe_truncate_1 = require("./util/app.pipe.truncate");
 var AppModule = (function () {
     function AppModule(_logger) {
         this._logger = _logger;
@@ -47,7 +48,7 @@ var AppModule = (function () {
             declarations: [app_component_1.AppComponent, list_component_1.ListComponent, navbar_component_1.NavbarComponent, image_slider_component_1.ImageSliderComponent,
                 detail_component_1.DetailComponent, contact_component_1.ContactComponent,
                 location_component_1.LocationComponent, imprint_component_1.ImprintComponent,
-                list_pipe_filter_1.FilterVehiclePipe, app_pipe_keys_1.KeysPipe, list_pipe_search_1.SearchVehiclePipe, list_pipe_sort_1.SortPipe
+                list_pipe_filter_1.FilterVehiclePipe, app_pipe_keys_1.KeysPipe, list_pipe_search_1.SearchVehiclePipe, list_pipe_sort_1.SortPipe, app_pipe_truncate_1.TruncatePipe
             ], providers: [core_2.Logger,
                 core_3.ERROR_LOGGER_PROVIDERS,
                 core_4.WARN_LOGGER_PROVIDERS,

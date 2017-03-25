@@ -57,7 +57,81 @@
         </div>
     </div>-->
     </div>
+    <!-- cars -->
+    <div class="row">
+        <div class="col s12 m6 l4 hoverable"
+             *ngFor="let vehicle of vehicles | FilterVehiclePipe: filter.category: filter.brand : filter.model : filter.minPrice : filter.maxPrice |SearchVehiclePipe: filter.freeText | FilterVehiclePipe: filter.category: filter.brand : filter.model : filter.minPrice : filter.maxPrice | orderBy: fieldToSort | paginate: {itemsPerPage: 10, currentPage:page, id: '1'}; let i = index"
+             (click)="onVehicleSelect(vehicle)">
+            <div class="card">
+                <div class="card-image">
+                    <img [src]="vehicle.vehicleImage.murl">
+                </div>
+                <div class="card-tabs">
+
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab blue lighten-1" style="color:white;">
+                            {{vehicle.brandDescription}} {{vehicle.modelDescription | truncate : [20]}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-content">
+                    <p>{{vehicle.category}} <br/>
+                        {{vehicle.engineSpecifics.power}}kW ({{vehicle.engineSpecifics.ps}} PS),<br/>
+                        {{vehicle.engineSpecifics.fuelType}},
+                        {{vehicle.engineSpecifics.gearBox}}, <br/>
+                        {{vehicle.engineSpecifics.airConditioning}}, <br/>
+                        Kraftstoffverbr.komb.: ca. <br/>{{vehicle.engineSpecifics.emissionFuelConsumption}}/100 km
+                        g/km</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width"  style="color:white;">
+                        <li class="tab blue lighten-1">
+                            <i class="tiny material-icons">av_timer</i>{{vehicle.engineSpecifics.mileAge | number :
+                            '1.0-0' }} KM
+                        </li>
+                        <li class="tab blue lighten-1">
+                            <i class="tiny material-icons">today</i>EZ {{vehicle.engineSpecifics.firstRegistration |
+                            date: 'MM/yyyy'}}
+                        </li>
+                        <li class="tab blue lighten-1">
+                            {{vehicle.consumerPriceAmount | number : '1.0-0' }} €
+                        </li>
+                    </ul>
+                </div>
+                <!--<div class="card-action">
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="offer_item clearfix"
+       *ngFor="let vehicle of vehicles | FilterVehiclePipe: filter.category: filter.brand : filter.model : filter.minPrice : filter.maxPrice |SearchVehiclePipe: filter.freeText | FilterVehiclePipe: filter.category: filter.brand : filter.model : filter.minPrice : filter.maxPrice | orderBy: fieldToSort | paginate: {itemsPerPage: 10, currentPage:page, id: '1'}; let i = index"
+       (click)="onVehicleSelect(vehicle)">
+    <div class="offer_image"><img [src]="vehicle.vehicleImage.murl" alt=""></div>
+    <div class="offer_aside">
+      <h2>{{vehicle.brandDescription}} {{vehicle.modelDescription}}</h2>
+      <div class="offer_descr">
+        <p>{{vehicle.category}}
+          {{vehicle.engineSpecifics.power}}kW ({{vehicle.engineSpecifics.ps}} PS),
+          {{vehicle.engineSpecifics.fuelType}},
+          {{vehicle.engineSpecifics.gearBox}}, {{vehicle.engineSpecifics.airConditioning}}, Kraftstoffverbr.
+          komb.:
+          ca.
+          {{vehicle.engineSpecifics.emissionFuelConsumption}}/100 km
+          g/km</p>
+      </div>
+      <div class="offer_data">
+        <div class="offer_price">{{vehicle.consumerPriceAmount | number : '1.0-0' }} €</div>
+        <span class="offer_miliage">{{vehicle.engineSpecifics.mileAge | number : '1.0-0' }} KM</span>
+        <span class="offer_regist">EZ {{vehicle.engineSpecifics.firstRegistration | date: 'MM/yyyy'}}</span>
+      </div>
+    </div>
+  </div>
+  -->
+
 </div>
+
+
 <!-- header slider
 <div class="fullwidthbanner-container">
   <div class="fullwidthbanner">
