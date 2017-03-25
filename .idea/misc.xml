@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GradleLocalSettings">
-    <option name="modificationStamps">
-      <map>
-        <entry key="$PROJECT_DIR$/../../../CompleteProjects/spring-music" value="1484230437000" />
-        <entry key="$PROJECT_DIR$/../../../CompleteProjects/spring-music-master" value="1467649872000" />
-        <entry key="$PROJECT_DIR$/../../../HTML_CSS_JS/09_Wiegand/backend/Wiegand-automobile-backend" value="1476002526000" />
-        <entry key="$PROJECT_DIR$/../../../Java/11_microservice_rabbitmq/rabbitmq-consumer" value="1479901572000" />
-        <entry key="$PROJECT_DIR$/../../../Java/11_microservice_rabbitmq/rabbitmq-producer" value="1479901568000" />
-        <entry key="$PROJECT_DIR$/../../../Java/17_MHP_Academy/microservice-gradle" value="1490096656000" />
-        <entry key="$PROJECT_DIR$/../../../Java/18_Hello_Ninjas/Hello-Ninja" value="1489742990000" />
-        <entry key="$PROJECT_DIR$/../../../Java/18_Hello_Ninjas/hello-ninja" value="1489764803000" />
-        <entry key="$USER_HOME$/Downloads/spring-music-master" value="1467649872000" />
-      </map>
-    </option>
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
   <component name="masterDetails">
     <states>
