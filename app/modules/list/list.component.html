@@ -57,12 +57,26 @@
         </div>
     </div>-->
     </div>
+
+    <div class="row">
+        <pagination-controls (pageChange)="page = $event" id="1"
+                             previousLabel="Zurück"
+                             nextLabel="Vor"
+                             maxSize="5"
+                             directionLinks="true"
+                             autoHide="true" style="text-align: center">
+        </pagination-controls>
+    </div>
+    <div class="row" style="text-align: center" *ngIf="pageItems == 12">
+        <a class="waves-effect waves-teal btn-flat" (click)="showAllVehicles()">Zeig mir alle Autos</a>
+    </div>
     <!-- cars -->
     <div class="row">
-        <div class="col s12 m6 l4 hoverable"
-             *ngFor="let vehicle of vehicles | FilterVehiclePipe: filter.category: filter.brand : filter.model : filter.minPrice : filter.maxPrice |SearchVehiclePipe: filter.freeText | FilterVehiclePipe: filter.category: filter.brand : filter.model : filter.minPrice : filter.maxPrice | orderBy: fieldToSort | paginate: {itemsPerPage: 10, currentPage:page, id: '1'}; let i = index"
-             (click)="onVehicleSelect(vehicle)">
-            <div class="card">
+        <div class="col s12 m6 l4"
+             *ngFor="let vehicle of vehicles | FilterVehiclePipe: filter.category: filter.brand : filter.model : filter.minPrice : filter.maxPrice |SearchVehiclePipe: filter.freeText | FilterVehiclePipe: filter.category: filter.brand : filter.model : filter.minPrice : filter.maxPrice | orderBy: fieldToSort | paginate: {itemsPerPage: pageItems, currentPage:page, id: '1'}; let i = index"
+             >
+
+            <div class="card hoverable" (click)="onVehicleSelect(vehicle)">
                 <div class="card-image">
                     <img [src]="vehicle.vehicleImage.murl">
                 </div>
@@ -70,7 +84,7 @@
 
                     <ul class="tabs tabs-fixed-width">
                         <li class="tab blue lighten-1" style="color:white;">
-                            {{vehicle.brandDescription}} {{vehicle.modelDescription | truncate : [20]}}
+                            {{vehicle.brandDescription}} {{vehicle.modelDescription | truncate : [15]}}
                         </li>
                     </ul>
                 </div>
@@ -98,10 +112,17 @@
                         </li>
                     </ul>
                 </div>
-                <!--<div class="card-action">
-                </div>-->
             </div>
         </div>
+    </div>
+    <div class="row">
+        <pagination-controls (pageChange)="page = $event" id="1"
+                             previousLabel="Zurück"
+                             nextLabel="Vor"
+                             maxSize="5"
+                             directionLinks="true"
+                             autoHide="true" style="text-align: center">
+        </pagination-controls>
     </div>
 
     <!-- <div class="offer_item clearfix"

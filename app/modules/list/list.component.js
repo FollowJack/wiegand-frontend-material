@@ -45,6 +45,7 @@ var ListComponent = (function () {
         this.isModelDisabled = true; // default disabled
         this.vehicles = [];
         this.fieldToSort = "lastModifiedSince";
+        this.pageItems = 12;
         this._logger.debug('ListComponent - constructor - initialized');
         this.loadVehiclesAndDropdowns();
         this.loadDropdowns();
@@ -67,10 +68,6 @@ var ListComponent = (function () {
             _this._logger.debug("Error with while downloading cars: " + error);
         });
     };
-    ListComponent.prototype.loadDropdowns = function () {
-        this._logger.debug('ListComponent - loadDropdowns');
-        this.dropdown = this._service.getDropdown();
-    };
     ListComponent.prototype.onSort = function (fieldToSort) {
         if (fieldToSort === this.fieldToSort) {
             this.fieldToSort = "-" + this.fieldToSort;
@@ -87,7 +84,6 @@ var ListComponent = (function () {
     };
     ListComponent.prototype.onCategorySelect = function () {
         this._logger.debug('ListComponent - onCategorySelect - selected category: ' + this.filter.category);
-        this.resetSearch();
         // case category not set then show default
         if (this.filter.category == "") {
             this.dropdown.brands = this.dropdown.categories[this.ANY_DEFAULT];
@@ -114,9 +110,6 @@ var ListComponent = (function () {
         else {
             this.dropdown.brands[this.ANY_DEFAULT].amount = this.dropdown.categories[this.filter.category].amount;
         }
-    };
-    ListComponent.prototype.resetSearch = function () {
-        this.filter.freeText = "";
     };
     ListComponent.prototype.onBrandSelect = function () {
         this._logger.debug('ListComponent - onBrandSelect - selected brand: ' + this.filter.brand);
@@ -219,6 +212,8 @@ var ListComponent = (function () {
      }*/
     ListComponent.prototype.loadDropdowns = function () {
         $('select').material_select();
+        this._logger.debug('ListComponent - loadDropdowns');
+        this.dropdown = this._service.getDropdown();
     };
     ListComponent.prototype.loadSlider = function () {
         var slider = document.getElementById('price-range');
@@ -234,6 +229,9 @@ var ListComponent = (function () {
                 decimals: 0
             })
         });
+    };
+    ListComponent.prototype.showAllVehicles = function () {
+        this.pageItems = this.vehicles.length;
     };
     ListComponent = __decorate([
         core_1.Component({

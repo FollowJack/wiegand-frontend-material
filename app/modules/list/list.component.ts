@@ -53,6 +53,8 @@ export class ListComponent implements AfterViewInit {
 
     fieldToSort = "lastModifiedSince";
 
+    pageItems = 12;
+
 
     constructor(private _logger: Logger,
                 private _router: Router,
@@ -86,10 +88,6 @@ export class ListComponent implements AfterViewInit {
         );
     }
 
-    private loadDropdowns() {
-        this._logger.debug('ListComponent - loadDropdowns');
-        this.dropdown = this._service.getDropdown();
-    }
 
     private onSort(fieldToSort: any) {
 
@@ -112,7 +110,6 @@ export class ListComponent implements AfterViewInit {
     private onCategorySelect() {
         this._logger.debug('ListComponent - onCategorySelect - selected category: ' + this.filter.category);
 
-        this.resetSearch();
         // case category not set then show default
         if (this.filter.category == "") {
             this.dropdown.brands = this.dropdown.categories[this.ANY_DEFAULT];
@@ -140,9 +137,6 @@ export class ListComponent implements AfterViewInit {
         }
     }
 
-    private resetSearch() {
-        this.filter.freeText = "";
-    }
 
     private onBrandSelect() {
         this._logger.debug('ListComponent - onBrandSelect - selected brand: ' + this.filter.brand);
@@ -248,6 +242,8 @@ export class ListComponent implements AfterViewInit {
      }*/
     private loadDropdowns() {
         $('select').material_select();
+        this._logger.debug('ListComponent - loadDropdowns');
+        this.dropdown = this._service.getDropdown();
     }
 
     private loadSlider() {
@@ -265,5 +261,9 @@ export class ListComponent implements AfterViewInit {
             })
         });
 
+    }
+
+    private showAllVehicles(){
+        this.pageItems = this.vehicles.length;
     }
 }
