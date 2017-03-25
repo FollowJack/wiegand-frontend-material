@@ -32,18 +32,34 @@
 </head>
 <body>
 
-<!-- Page preloader -->
-<div id="loading">
-    <div id="preloader">
-        <span></span>
-        <span></span>
+    <!-- Page preloader -->
+    <div id="loading"  style="height: 1000px;">
+        <div id="preloader">
+            <span></span>
+            <span></span>
+        </div>
     </div>
-</div>
-
-<my-app>Lade...</my-app>
+<my-app>
+</my-app>
 
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<script>
+    setTimeout(function () {
+        $('#preloader').velocity({
+
+            opacity: "0",
+            complete: function () {
+                $("#loading").velocity("fadeOut", {
+                    duration: 1000,
+                    easing: [0.7, 0, 0.3, 1],
+                });
+            }
+        })
+
+    }, 1000);
+</script>
 <script src="lib/materialize.js"></script>
 <script src="lib/noUiSlider/nouislider.js"></script>
 <script src="systemjs.config.js"></script>

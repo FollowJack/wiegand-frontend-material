@@ -68,7 +68,7 @@
         </pagination-controls>
     </div>
     <div class="row" style="text-align: center" *ngIf="pageItems == 12">
-        <a class="waves-effect waves-teal btn-flat" (click)="showAllVehicles()">Zeig mir alle Autos</a>
+        <a class="waves-effect waves-teal btn-flat" (click)="showAllVehicles()">Zeig mir alle auf Autos sofort!</a>
     </div>
     <!-- cars -->
     <div class="row">
@@ -83,7 +83,7 @@
                 <div class="card-tabs">
 
                     <ul class="tabs tabs-fixed-width">
-                        <li class="tab blue lighten-1" style="color:white;">
+                        <li class="tab blue" style="color:white;">
                             {{vehicle.brandDescription}} {{vehicle.modelDescription | truncate : [15]}}
                         </li>
                     </ul>

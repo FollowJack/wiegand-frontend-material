@@ -49,7 +49,6 @@ export class AppComponent implements AfterViewInit {
 
     ngAfterViewInit(): void {
         this._logger.debug('AppComponent - ngAfterViewInit - initialized');
-        this.loadWelcomeScreen();
         this.scrollPageToTop();
     }
 
@@ -58,25 +57,6 @@ export class AppComponent implements AfterViewInit {
             this._router.navigate([value]);
         }
         return false;
-    }
-
-
-    private loadWelcomeScreen() {
-        this._logger.debug('AppComponent - loadWelcomeScreen - initialized');
-
-        setTimeout(function () {
-            $('#preloader').velocity({
-
-                opacity: "0",
-                complete: function () {
-                    $("#loading").velocity("fadeOut", {
-                        duration: 1000,
-                        easing: [0.7, 0, 0.3, 1],
-                    });
-                }
-            })
-
-        }, 1000);
     }
 
     private scrollPageToTop() {

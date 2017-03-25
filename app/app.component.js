@@ -46,7 +46,6 @@ var AppComponent = (function () {
     };
     AppComponent.prototype.ngAfterViewInit = function () {
         this._logger.debug('AppComponent - ngAfterViewInit - initialized');
-        this.loadWelcomeScreen();
         this.scrollPageToTop();
     };
     AppComponent.prototype.navigateTo = function (value) {
@@ -54,20 +53,6 @@ var AppComponent = (function () {
             this._router.navigate([value]);
         }
         return false;
-    };
-    AppComponent.prototype.loadWelcomeScreen = function () {
-        this._logger.debug('AppComponent - loadWelcomeScreen - initialized');
-        setTimeout(function () {
-            $('#preloader').velocity({
-                opacity: "0",
-                complete: function () {
-                    $("#loading").velocity("fadeOut", {
-                        duration: 1000,
-                        easing: [0.7, 0, 0.3, 1],
-                    });
-                }
-            });
-        }, 1000);
     };
     AppComponent.prototype.scrollPageToTop = function () {
         this._router.events.subscribe(function (event) {
