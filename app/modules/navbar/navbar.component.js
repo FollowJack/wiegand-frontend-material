@@ -20,8 +20,11 @@ var NavbarComponent = (function () {
             logo: "/images/logo/logo_white_cutted.png"
         };
         this._logger.debug('NavbarComponent - constructor - initialized');
-        this.loadNavbar();
     }
+    NavbarComponent.prototype.ngAfterViewInit = function () {
+        this._logger.debug('NavbarComponent - ngAfterViewInit - initialized');
+        this.loadNavbar();
+    };
     NavbarComponent.prototype.loadNavbar = function () {
         this._logger.debug('NavbarComponent - loadNavbar - initialized');
         $(".button-collapse").sideNav();

@@ -1,4 +1,4 @@
-<nav class="light-blue lighten-1" role="navigation">
+<nav class="black" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" routerLink="/" routerLinkActive="active" class="brand-logo">
             <img [src]="images.logo" alt="Wiegand-Automobile" style="margin-top:2px;height:53px;"></a>
@@ -9,6 +9,13 @@
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
+            <li><div class="userView">
+                <div class="background black">
+                </div>
+                <a><img class="" [src]="images.logo" style="max-width: 100%"></a>
+                <a><span class="white-text name">Wiegand Automobile</span></a>
+                <a><span class="white-text email">Seit 1999 für Sie da!</span></a>
+            </div></li>
             <li><a routerLink="/unsere-autos" routerLinkActive="active"><span>Unsere Autos</span></a></li>
             <li><a routerLink="/kontakt" routerLinkActive="active"><span>Kontakt</span></a></li>
             <li><a routerLink="/anfahrt" routerLinkActive="active"><span>Anfahrt</span></a></li>
