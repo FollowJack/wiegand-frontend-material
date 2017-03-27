@@ -30,13 +30,14 @@ var DetailComponent = (function () {
             },
             engineSpecifics: {}
         };
+        this.pageNumber = 0;
+        this.pageCount = 0;
         this.isGalleryLoaded = false;
         this._logger.debug('DetailComponent - constructor - initialized');
         this.loadVehicle();
-        this.reloadVehicleImageGalleryWhenResize();
     }
     DetailComponent.prototype.ngAfterViewChecked = function () {
-        if ($('#gallery_thumbs').children().length <= 0) {
+        if ($('.slides').children().length <= 0) {
             return;
         }
         //this._logger.debug('DetailComponent - ngAfterViewChecked - initialized');
@@ -45,53 +46,56 @@ var DetailComponent = (function () {
             this.isGalleryLoaded = true;
         }
     };
-    DetailComponent.prototype.reloadVehicleImageGalleryWhenResize = function () {
-        var loadVehicleGallery = this.loadVehicleGallery;
-        //var logger = this._logger;
-        var resizeTimer;
-        $(window).resize(function () {
-            //logger.debug('DetailComponent - reloadVehicleImageGalleryWhenResize - resized');
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(loadVehicleGallery, 100);
-        });
-    };
-    DetailComponent.prototype.loadVehicleGallery = function () {
-        $('#gallery_thumbs').children().each(function (i) {
-            $(this).addClass('itm' + i);
-            $(this).click(function () {
-                $('#gallery_images').trigger('slideTo', [i, 0, true]);
-                $('#gallery_thumbs a').removeClass('selected');
-                $(this).addClass('selected');
-                return false;
-            });
-        });
-        $('#gallery_thumbs a.itm0').addClass('selected');
-        $('#gallery_images').carouFredSel({
-            infinite: false,
-            circular: false,
-            auto: false,
-            width: '100%',
-            scroll: {
-                items: 1,
-                fx: "crossfade"
-            }
-        });
-        $('#gallery_thumbs').carouFredSel({
-            prev: "#gallery_thumbs_prev",
-            next: "#gallery_thumbs_next",
-            infinite: false,
-            circular: false,
-            auto: false,
-            width: '100%',
-            scroll: {
-                items: 1
-            }
-        });
-        //activate pretty photo viewer
-        //this._logger.debug("DetailComponent - loadVehicleGallery - prettyphoto loaded");
-        $("a[rel^='prettyPhoto[gal]']").prettyPhoto({ social_tools: false,
-            deeplinking: false }); //{theme:'facebook'}
-    };
+    /*private reloadVehicleImageGalleryWhenResize() {
+     var loadVehicleGallery: any = this.loadVehicleGallery;
+     //var logger = this._logger;
+     var resizeTimer: any;
+     $(window).resize(function () {
+     //logger.debug('DetailComponent - reloadVehicleImageGalleryWhenResize - resized');
+     clearTimeout(resizeTimer);
+     resizeTimer = setTimeout(loadVehicleGallery, 100);
+     });
+     }
+
+     loadVehicleGallery() {
+     $('#gallery_thumbs').children().each(function (i: any) {
+     $(this).addClass('itm' + i);
+     $(this).click(function () {
+     $('#gallery_images').trigger('slideTo', [i, 0, true]);
+     $('#gallery_thumbs a').removeClass('selected');
+     $(this).addClass('selected');
+     return false;
+     });
+     });
+     $('#gallery_thumbs a.itm0').addClass('selected');
+     $('#gallery_images').carouFredSel({
+     infinite: false,
+     circular: false,
+     auto: false,
+     width: '100%',
+     scroll: {
+     items: 1,
+     fx: "crossfade"
+     }
+     });
+     $('#gallery_thumbs').carouFredSel({
+     prev: "#gallery_thumbs_prev",
+     next: "#gallery_thumbs_next",
+     infinite: false,
+     circular: false,
+     auto: false,
+     width: '100%',
+     scroll: {
+     items: 1
+     }
+     });
+     //activate pretty photo viewer
+     //this._logger.debug("DetailComponent - loadVehicleGallery - prettyphoto loaded");
+     $("a[rel^='prettyPhoto[gal]']").prettyPhoto({social_tools: false,
+     deeplinking: false});//{theme:'facebook'}
+
+
+     }*/
     DetailComponent.prototype.loadVehicle = function () {
         var _this = this;
         this._logger.debug('DetailComponent - loadVehicle');
@@ -102,7 +106,8 @@ var DetailComponent = (function () {
                 _this._logger.debug('DetailComponent - loadVehicle - subscribed');
                 _this.vehicle = data;
                 _this.setDefaultImages();
-                _this.loadVehicleGallery();
+                //this.loadVehicleGallery();
+                //this.loadVehicleGallery();
             }, function (error) {
                 _this._logger.debug("Error while downloading vehicle: " + error);
             });
@@ -119,6 +124,10 @@ var DetailComponent = (function () {
     };
     DetailComponent.prototype.onEmailSelect = function () {
         //this._analytics.sendEmailClicked()
+    };
+    DetailComponent.prototype.loadVehicleGallery = function () {
+        this._logger.debug('ImageSliderComponent - loadSlider - initialized');
+        $('.slider').slider();
     };
     DetailComponent = __decorate([
         core_1.Component({

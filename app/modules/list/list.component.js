@@ -24,9 +24,6 @@ var ListComponent = (function () {
         this._analyticsService = _analyticsService;
         this.ANY_DEFAULT = "Beliebig";
         this.component = this;
-        this.images = {
-            headline1: "images/header/6er.jpg"
-        };
         this.filter = {
             category: "",
             brand: "",

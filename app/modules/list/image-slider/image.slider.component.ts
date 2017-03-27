@@ -13,6 +13,10 @@ declare var $: any;
 })
 export class ImageSliderComponent implements AfterViewInit {
 
+    images: any = {
+        headline1: "images/header/6er.jpg"
+    };
+
     constructor(private _logger: Logger) {
         this._logger.debug('ImageSliderComponent - constructor - initialized');
     }
@@ -22,13 +26,7 @@ export class ImageSliderComponent implements AfterViewInit {
     }
 
     private loadSlider() {
-        this._logger.debug('ImageSliderComponent - constructor - initialized');
-        $('.carousel.carousel-slider').carousel({fullWidth: true});
-        let timer = Observable.timer(1000,4500);
-        timer.subscribe(t => this.autoplay());
-    }
-
-    private autoplay() {
-        $('.carousel').carousel('next');
+        this._logger.debug('ImageSliderComponent - loadSlider - initialized');
+        $('.slider').slider();
     }
 }

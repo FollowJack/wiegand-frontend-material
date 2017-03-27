@@ -6,169 +6,235 @@
 
 <!-- breadcrumbs -->
 <div class="middle_row row_white breadcrumbs">
-  <div class="container">
-    <p><a routerLink="/unsere-autos">Unsere Autos</a>
-      <span class="separator">&rsaquo;</span> <span class="current">{{vehicle.brandDescription}}</span></p>
-  </div>
+    <div class="container">
+        <p><a routerLink="/unsere-autos">Unsere Autos</a>
+            <span class="separator">&rsaquo;</span> <span class="current">{{vehicle.brandDescription}}</span></p>
+    </div>
 </div>
 <!--/ breadcrumbs -->
 
-<!-- middle -->
-<div id="middle" class="full_width">
-  <div class="container clearfix">
+<div class="container ">
 
-    <!-- content -->
-    <div class="content" *ngIf="vehicle">
-
-
-      <!-- header -->
-      <div class="header_title">
-        <h1><span>{{vehicle.brandDescription}}</span> {{vehicle.modelDescription}}</h1>
-      </div>
-      <!--/ header -->
-
-      <div class="offer_details clearfix">
-
-        <!-- image gallery left -->
-        <div class="offer_gallery">
-          <div class="gallery_images">
-            <div id="gallery_images" *ngIf="vehicle.vehicleImages?.length > 0" >
-              <div class="gallery_image_item" *ngFor="let image of vehicle.vehicleImages">
-
-                <img [src]="image.xlurl" alt="">
-                <a href="{{image.xlurl}}" rel="prettyPhoto[gal]"></a>
-              </div>
-            </div>
-            <!-- if empty -->
-            <!--<div id="gallery_images" *ngIf="!vehicle.vehicleImages || vehicle.vehicleImages.length === 0" >
-              <div class="gallery_image_item">
-
-                <img src="images/logo/WiegandAutomobile.png" alt="">
-                <a href="images/logo/WiegandAutomobile.png" rel="prettyPhoto[gal]"></a>
-              </div>
-            </div>-->
-          </div>
-
-          <div class="gallery_thumbs">
-            <div id="gallery_thumbs" *ngIf="vehicle.vehicleImages?.length > 0" >
-              <a href="#" *ngFor="let image of vehicle.vehicleImages"><img [src]="image.murl" alt=""></a>
-            </div>
-            <!-- if empty -->
-            <!--<div id="gallery_thumbs" *ngIf="!vehicle.vehicleImages || vehicle.vehicleImages.length === 0" >
-              <a href="#"><img src="images/logo/Wiegand_Automobile.png" alt=""></a>
-            </div>-->
-
-            <a href="#" class="prev" id="gallery_thumbs_prev"></a>
-            <a href="#" class="next" id="gallery_thumbs_next"></a>
-          </div>
-
-          <script>
-
-          </script>
-
-        </div>
-        <!--/ image gallery left -->
-
-        <!-- offer right -->
-        <div class="offer_aside">
-          <div class="offer_price">
-            <strong>{{vehicle.consumerPriceAmount | number : '1.0-0' || "-"}} €</strong><br>
-            <em>MwSt. nicht ausweisbar</em>
-
-            <!--<a href="#" class="btn_save">Parken</a>-->
-          </div>
-
-          <div class="offer_data">
-            <ul>
-              <li>EZ {{vehicle.engineSpecifics.firstRegistration | date: 'MM/yyyy' || "-"}}</li>
-              <li>{{vehicle.engineSpecifics.mileAge | number : '1.0-0' || "-"}} KM</li>
-              <li>{{vehicle.engineSpecifics.fuelType || "-"}}</li>
-              <li>{{vehicle.engineSpecifics.power || "-"}}kW ({{vehicle.engineSpecifics.ps || "-"}} PS)</li>
+    <!-- header -->
+    <div class="row">
+        <h4><span>{{vehicle.brandDescription}}</span> {{vehicle.modelDescription}}</h4>
+    </div>
+</div>
+        <div class="slider">
+            <ul class="slides">
+                <li *ngFor="let image of vehicle.vehicleImages">
+                    <img [src]="image.xlurl">
+                </li>
             </ul>
-          </div>
-
-
-          <!--<div class="offer_descr">
-                        <p>Car Desciption - Electric front windows, Heated rear window, Rear window wash/wipe with intermittent delay, Windscreen
-                            wipers/ intermittent wipe + 4 position delay, Anti-lock brake system, Rev counter, Warning buzzer and light for front
-                            seatbelts unfastened, Body colour door mirrors.</p>
-                    </div>-->
-          <div class="offer_specification">
-            <ul>
-              <li><span class="spec_name">Hubraum:</span> <strong class="spec_value">{{vehicle.engineSpecifics.cupicCapacity
-                || "-"}}
-                cm³</strong></li>
-              <li class="even"><span class="spec_name">Anzahl Sitzplätze:</span> <strong class="spec_value">{{vehicle.engineSpecifics.numberOfSeats
-                || "-"}}</strong>
-              </li>
-              <li><span class="spec_name">Anzahl der Türen:</span> <strong class="spec_value">{{vehicle.engineSpecifics.doorCount
-                || "-"}}</strong>
-              </li>
-              <li class="even"><span class="spec_name">Schadstoffklasse:</span> <strong class="spec_value">{{vehicle.engineSpecifics.emissionClass
-                || "-"}}</strong>
-              </li>
-              <li><span class="spec_name">Umweltplakette:</span> <strong class="spec_value">{{vehicle.engineSpecifics.emissionSticker
-                || "-"}}</strong>
-              </li>
-              <li class="even"><span class="spec_name">Anzahl der Fahrzeughalter:</span> <strong class="spec_value">{{vehicle.engineSpecifics.numberOfPreviousOwner
-                || "-"}}</strong>
-              </li>
-              <li><span class="spec_name">Herrstellerfarbbezeichnung:</span> <strong class="spec_value">{{vehicle.engineSpecifics.exteriorColor
-                || "-"}} </strong>
-              </li>
-              <li class="even"><span class="spec_name">Innenaustatung:</span> <strong class="spec_value">{{vehicle.engineSpecifics.interiorColor
-                || "-"}}</strong>
-              </li>
-              <li><span class="spec_name">Kraftstoffverbr. komb.:</span> <strong class="spec_value">ca.
-                {{vehicle.engineSpecifics.emissionFuelConsumption || "-"}} l/100 km</strong></li>
-              <li class="even"><span class="spec_name">Kraftstoffverbr. innerorts:</span> <strong class="spec_value">ca.
-                {{vehicle.engineSpecifics.emissionFuelConsumptionInner || "-"}} l/100 km</strong></li>
-              <li><span class="spec_name">Kraftstoffverbr. außerorts:</span> <strong class="spec_value">ca.
-                {{vehicle.engineSpecifics.emissionFuelConsumptionOuter || "-"}} l/100 km</strong></li>
-              <li class="even"><span class="spec_name">CO²-Emissionen komb.:</span> <strong class="spec_value">ca.
-                {{vehicle.engineSpecifics.carbonDioxideEmission || "-"}} g/km</strong></li>
-            </ul>
-          </div>
-
         </div>
-        <!--/ offer right -->
-      </div>
+<div class="container ">
 
-      <!-- details tabs -->
-      <div class="details_tabs">
+    <!--/ header -->
+    <div class="row">
+
+        <!-- Image carousel -->
+            <!--<div class="carousel col 6l m6 s12">-->
+            <!-- <a class="carousel-item" *ngFor="let image of vehicle.vehicleImages; let i = index">-->
+        <!--<div class="col l6 m6 s12">
+            <a class="col l6 m6 s12" *ngFor="let image of vehicle.vehicleImages; let i = index">
+                <img id="{{i}}" [src]="image.xlurl" (click)="displayImageLarge(i)"  style="max-width: 100%;
+    max-height: 100%;">
+            </a>
+        </div>-->
+
+        <div class="col l6 m6 s12">
+            <div class="offer_descr">
+                <p>Car Desciption - Electric front windows, Heated rear window, Rear window wash/wipe with intermittent
+                    delay, Windscreen
+                    wipers/ intermittent wipe + 4 position delay, Anti-lock brake system, Rev counter, Warning buzzer
+                    and light for front
+                    seatbelts unfastened, Body colour door mirrors.</p>
+            </div>
+            <div class="offer_specification">
+                <ul>
+                    <li><span class="spec_name">Hubraum:</span> <strong class="spec_value">{{vehicle.engineSpecifics.cupicCapacity
+                        || "-"}}
+                        cm³</strong></li>
+                    <li class="even"><span class="spec_name">Anzahl Sitzplätze:</span> <strong class="spec_value">{{vehicle.engineSpecifics.numberOfSeats
+                        || "-"}}</strong>
+                    </li>
+                    <li><span class="spec_name">Anzahl der Türen:</span> <strong class="spec_value">{{vehicle.engineSpecifics.doorCount
+                        || "-"}}</strong>
+                    </li>
+                    <li class="even"><span class="spec_name">Schadstoffklasse:</span> <strong class="spec_value">{{vehicle.engineSpecifics.emissionClass
+                        || "-"}}</strong>
+                    </li>
+                    <li><span class="spec_name">Umweltplakette:</span> <strong class="spec_value">{{vehicle.engineSpecifics.emissionSticker
+                        || "-"}}</strong>
+                    </li>
+                    <li class="even"><span class="spec_name">Anzahl der Fahrzeughalter:</span> <strong
+                            class="spec_value">{{vehicle.engineSpecifics.numberOfPreviousOwner
+                        || "-"}}</strong>
+                    </li>
+                    <li><span class="spec_name">Herrstellerfarbbezeichnung:</span> <strong class="spec_value">{{vehicle.engineSpecifics.exteriorColor
+                        || "-"}} </strong>
+                    </li>
+                    <li class="even"><span class="spec_name">Innenaustatung:</span> <strong class="spec_value">{{vehicle.engineSpecifics.interiorColor
+                        || "-"}}</strong>
+                    </li>
+                    <li><span class="spec_name">Kraftstoffverbr. komb.:</span> <strong class="spec_value">ca.
+                        {{vehicle.engineSpecifics.emissionFuelConsumption || "-"}} l/100 km</strong></li>
+                    <li class="even"><span class="spec_name">Kraftstoffverbr. innerorts:</span> <strong
+                            class="spec_value">ca.
+                        {{vehicle.engineSpecifics.emissionFuelConsumptionInner || "-"}} l/100 km</strong></li>
+                    <li><span class="spec_name">Kraftstoffverbr. außerorts:</span> <strong class="spec_value">ca.
+                        {{vehicle.engineSpecifics.emissionFuelConsumptionOuter || "-"}} l/100 km</strong></li>
+                    <li class="even"><span class="spec_name">CO²-Emissionen komb.:</span> <strong class="spec_value">ca.
+                        {{vehicle.engineSpecifics.carbonDioxideEmission || "-"}} g/km</strong></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!--<div class="offer_details clearfix">
+
+      <!-- image gallery left
+      <div class="offer_gallery">
+        <div class="gallery_images">
+          <div id="gallery_images" *ngIf="vehicle.vehicleImages?.length > 0" >
+            <div class="gallery_image_item" *ngFor="let image of vehicle.vehicleImages">
+
+              <img [src]="image.xlurl" alt="">
+              <a href="{{image.xlurl}}" rel="prettyPhoto[gal]"></a>
+            </div>
+          </div>
+          <!-- if empty -->
+    <!--<div id="gallery_images" *ngIf="!vehicle.vehicleImages || vehicle.vehicleImages.length === 0" >
+      <div class="gallery_image_item">
+
+        <img src="images/logo/WiegandAutomobile.png" alt="">
+        <a href="images/logo/WiegandAutomobile.png" rel="prettyPhoto[gal]"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery_thumbs">
+    <div id="gallery_thumbs" *ngIf="vehicle.vehicleImages?.length > 0" >
+      <a href="#" *ngFor="let image of vehicle.vehicleImages"><img [src]="image.murl" alt=""></a>
+    </div>
+    <!-- if empty -->
+    <!--<div id="gallery_thumbs" *ngIf="!vehicle.vehicleImages || vehicle.vehicleImages.length === 0" >
+      <a href="#"><img src="images/logo/Wiegand_Automobile.png" alt=""></a>
+    </div>
+
+    <a href="#" class="prev" id="gallery_thumbs_prev"></a>
+    <a href="#" class="next" id="gallery_thumbs_next"></a>
+  </div>
+
+  <script>
+
+  </script>
+
+</div>
+<!--/ image gallery left
+
+<!-- offer right
+<div class="offer_aside">
+  <div class="offer_price">
+    <strong>{{vehicle.consumerPriceAmount | number : '1.0-0' || "-"}} €</strong><br>
+    <em>MwSt. nicht ausweisbar</em>
+
+  </div>
+
+  <div class="offer_data">
+    <ul>
+      <li>EZ {{vehicle.engineSpecifics.firstRegistration | date: 'MM/yyyy' || "-"}}</li>
+      <li>{{vehicle.engineSpecifics.mileAge | number : '1.0-0' || "-"}} KM</li>
+      <li>{{vehicle.engineSpecifics.fuelType || "-"}}</li>
+      <li>{{vehicle.engineSpecifics.power || "-"}}kW ({{vehicle.engineSpecifics.ps || "-"}} PS)</li>
+    </ul>
+  </div>
+
+
+  <!--<div class="offer_descr">
+                <p>Car Desciption - Electric front windows, Heated rear window, Rear window wash/wipe with intermittent delay, Windscreen
+                    wipers/ intermittent wipe + 4 position delay, Anti-lock brake system, Rev counter, Warning buzzer and light for front
+                    seatbelts unfastened, Body colour door mirrors.</p>
+            </div>
+  <div class="offer_specification">
+    <ul>
+      <li><span class="spec_name">Hubraum:</span> <strong class="spec_value">{{vehicle.engineSpecifics.cupicCapacity
+        || "-"}}
+        cm³</strong></li>
+      <li class="even"><span class="spec_name">Anzahl Sitzplätze:</span> <strong class="spec_value">{{vehicle.engineSpecifics.numberOfSeats
+        || "-"}}</strong>
+      </li>
+      <li><span class="spec_name">Anzahl der Türen:</span> <strong class="spec_value">{{vehicle.engineSpecifics.doorCount
+        || "-"}}</strong>
+      </li>
+      <li class="even"><span class="spec_name">Schadstoffklasse:</span> <strong class="spec_value">{{vehicle.engineSpecifics.emissionClass
+        || "-"}}</strong>
+      </li>
+      <li><span class="spec_name">Umweltplakette:</span> <strong class="spec_value">{{vehicle.engineSpecifics.emissionSticker
+        || "-"}}</strong>
+      </li>
+      <li class="even"><span class="spec_name">Anzahl der Fahrzeughalter:</span> <strong class="spec_value">{{vehicle.engineSpecifics.numberOfPreviousOwner
+        || "-"}}</strong>
+      </li>
+      <li><span class="spec_name">Herrstellerfarbbezeichnung:</span> <strong class="spec_value">{{vehicle.engineSpecifics.exteriorColor
+        || "-"}} </strong>
+      </li>
+      <li class="even"><span class="spec_name">Innenaustatung:</span> <strong class="spec_value">{{vehicle.engineSpecifics.interiorColor
+        || "-"}}</strong>
+      </li>
+      <li><span class="spec_name">Kraftstoffverbr. komb.:</span> <strong class="spec_value">ca.
+        {{vehicle.engineSpecifics.emissionFuelConsumption || "-"}} l/100 km</strong></li>
+      <li class="even"><span class="spec_name">Kraftstoffverbr. innerorts:</span> <strong class="spec_value">ca.
+        {{vehicle.engineSpecifics.emissionFuelConsumptionInner || "-"}} l/100 km</strong></li>
+      <li><span class="spec_name">Kraftstoffverbr. außerorts:</span> <strong class="spec_value">ca.
+        {{vehicle.engineSpecifics.emissionFuelConsumptionOuter || "-"}} l/100 km</strong></li>
+      <li class="even"><span class="spec_name">CO²-Emissionen komb.:</span> <strong class="spec_value">ca.
+        {{vehicle.engineSpecifics.carbonDioxideEmission || "-"}} g/km</strong></li>
+    </ul>
+  </div>
+
+</div>
+<!--/ offer right
+</div>
+
+<!-- details tabs -->
+    <div class="details_tabs">
         <div id="t_overview" class="tabcontent clearfix">
-          <div class="col col_1_3">
-            <h3>Innenausstattung</h3>
-            <ul>
-              <li *ngFor='let feature of vehicle.features.featuresInner'>{{feature}}</li>
-            </ul>
-          </div>
-          <div class="col col_1_3">
-            <h3>Außenausstattung</h3>
-            <ul>
-              <li *ngFor='let feature of vehicle.features.featuresOuter'>{{feature}}</li>
-            </ul>
-          </div>
-          <div class="col col_1_3">
-            <h3>Sicherheit & Umwelt</h3>
-            <ul>
-              <li *ngFor='let feature of vehicle.features.featuresSafety'>{{feature}}</li>
-            </ul>
-          </div>
+            <div class="col col_1_3">
+                <h3>Innenausstattung</h3>
+                <ul>
+                    <li *ngFor='let feature of vehicle.features.featuresInner'>{{feature}}</li>
+                </ul>
+            </div>
+            <div class="col col_1_3">
+                <h3>Außenausstattung</h3>
+                <ul>
+                    <li *ngFor='let feature of vehicle.features.featuresOuter'>{{feature}}</li>
+                </ul>
+            </div>
+            <div class="col col_1_3">
+                <h3>Sicherheit & Umwelt</h3>
+                <ul>
+                    <li *ngFor='let feature of vehicle.features.featuresSafety'>{{feature}}</li>
+                </ul>
+            </div>
         </div>
 
         <div id="t_description" class="tabcontent clearfix">
-          <!--<h3>Fahrzeugbeschreibung</h3>
-          <div class="col alpha">
-            <p>{{vehicle.detailedDescription}}</p>
-          </div>-->
-          <div class="col">
-            * Weitere Informationen zum offiziellen Kraftstoffverbrauch und zu den offiziellen spezifischen
-            CO2-Emissionen und gegebenenfalls zum Stromverbrauch neuer Pkw können dem 'Leitfaden über den offiziellen
-            Kraftstoffverbrauch, die offiziellen spezifischen CO2-Emissionen und den offiziellen Stromverbrauch neuer
-            Pkw' entnommen werden, der an allen Verkaufsstellen und bei der 'Deutschen Automobil Treuhand GmbH'
-            unentgeltlich erhältlich ist unter www.dat.de.
-          </div>
+            <!--<h3>Fahrzeugbeschreibung</h3>
+            <div class="col alpha">
+              <p>{{vehicle.detailedDescription}}</p>
+            </div>-->
+            <div class="col">
+                * Weitere Informationen zum offiziellen Kraftstoffverbrauch und zu den offiziellen spezifischen
+                CO2-Emissionen und gegebenenfalls zum Stromverbrauch neuer Pkw können dem 'Leitfaden über den
+                offiziellen
+                Kraftstoffverbrauch, die offiziellen spezifischen CO2-Emissionen und den offiziellen Stromverbrauch
+                neuer
+                Pkw' entnommen werden, der an allen Verkaufsstellen und bei der 'Deutschen Automobil Treuhand GmbH'
+                unentgeltlich erhältlich ist unter www.dat.de.
+            </div>
         </div>
 
         <!-- TODO: SEND EMAIL
@@ -247,17 +313,16 @@ http://mobile.de/auto-inserat/mercedes-benz-ml-63</textarea>
       <!--/ details tabs -->
 
         <div class="text_box">
-          <p>
-            <a href="tel:+49 6204 6080716"
-               class="btn btn_big btn_white"><span>Ruf an: <strong>+49 6204 6080716</strong></span></a>
-            <span class="btn btn_big btn_orange" (click)="onEmailSelect()"
-                  onclick="window.prompt('Kopieren in die Zwischenablage: Strg+C, Eingabetaste', 'WIEGAND-AUTOMOBILE@MOBILE.DE');">
+            <p>
+                <a href="tel:+49 6204 6080716"
+                   class="btn btn_big btn_white"><span>Ruf an: <strong>+49 6204 6080716</strong></span></a>
+                <span class="btn btn_big btn_orange" (click)="onEmailSelect()"
+                      onclick="window.prompt('Kopieren in die Zwischenablage: Strg+C, Eingabetaste', 'WIEGAND-AUTOMOBILE@MOBILE.DE');">
                        <span>WIEGAND-AUTOMOBILE@MOBILE.DE</span></span>
 
-          </p>
+            </p>
         </div>
 
-      </div>
-      <!--/ content -->
     </div>
-  </div>
+    <!--/ content -->
+</div>

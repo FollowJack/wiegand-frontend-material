@@ -26,10 +26,6 @@ export class ListComponent implements AfterViewInit {
 
     private component = this;
 
-    images: any = {
-        headline1: "images/header/6er.jpg"
-    };
-
     filter = {
         category: "",
         brand: "",

@@ -13,24 +13,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var core_1 = require("@angular/core");
 var core_2 = require('angular2-logger/core');
-var Rx_1 = require("rxjs/Rx");
 var ImageSliderComponent = (function () {
     function ImageSliderComponent(_logger) {
         this._logger = _logger;
+        this.images = {
+            headline1: "images/header/6er.jpg"
+        };
         this._logger.debug('ImageSliderComponent - constructor - initialized');
     }
     ImageSliderComponent.prototype.ngAfterViewInit = function () {
         this.loadSlider();
     };
     ImageSliderComponent.prototype.loadSlider = function () {
-        var _this = this;
-        this._logger.debug('ImageSliderComponent - constructor - initialized');
-        $('.carousel.carousel-slider').carousel({ fullWidth: true });
-        var timer = Rx_1.Observable.timer(1000, 4500);
-        timer.subscribe(function (t) { return _this.autoplay(); });
-    };
-    ImageSliderComponent.prototype.autoplay = function () {
-        $('.carousel').carousel('next');
+        this._logger.debug('ImageSliderComponent - loadSlider - initialized');
+        $('.slider').slider();
     };
     ImageSliderComponent = __decorate([
         core_1.Component({
