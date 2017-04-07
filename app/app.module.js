@@ -33,7 +33,7 @@ var imprint_component_1 = require("./modules/imprint/imprint.component");
 var list_pipe_search_1 = require("./modules/list/list.pipe.search");
 var list_pipe_sort_1 = require("./modules/list/list.pipe.sort");
 var navbar_component_1 = require("./modules/navbar/navbar.component");
-var image_slider_component_1 = require("./modules/list/image-slider/image.slider.component");
+var image_slider_component_1 = require("./modules/image-slider/image.slider.component");
 var app_pipe_truncate_1 = require("./util/app.pipe.truncate");
 var AppModule = (function () {
     function AppModule(_logger) {

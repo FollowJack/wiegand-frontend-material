@@ -24,6 +24,9 @@
 
     <script src="node_modules/angular2-logger/bundles/angular2-logger.sys.js"></script>
 
+    <!-- carousel fred -->
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -32,13 +35,13 @@
 </head>
 <body>
 
-    <!-- Page preloader -->
-    <div id="loading"  style="height: 1000px;">
-        <div id="preloader">
-            <span></span>
-            <span></span>
-        </div>
+<!-- Page preloader -->
+<div id="loading" style="height: 1000px;">
+    <div id="preloader">
+        <span></span>
+        <span></span>
     </div>
+</div>
 <my-app>
 </my-app>
 
@@ -64,6 +67,16 @@
 <script src="lib/noUiSlider/nouislider.js"></script>
 <script src="systemjs.config.js"></script>
 <script src="lib/stringTrimmer.js"></script>
+
+<!-- PhotoSwipe Core JS file -->
+<script src="lib/carousel/velocity.min.js"></script>
+<!-- PhotoSwipe UI JS file -->
+<script src="lib/carousel/velocity.ui.min.js"></script>
+<!-- carousel fred -->
+<script src="lib/carousel/jquery.carouFredSel.min.js"></script>
+<script src="lib/carousel/jquery.touchSwipe.min.js"></script>
+<script src="lib/carousel/jquery.prettyPhoto.js"></script>
+
 <!-- google analytics -->
 <script>
     (function (i, s, o, g, r, a, m) {

@@ -26,7 +26,7 @@ import {ImprintComponent} from "./modules/imprint/imprint.component";
 import {SearchVehiclePipe} from "./modules/list/list.pipe.search";
 import {SortPipe} from "./modules/list/list.pipe.sort";
 import {NavbarComponent} from "./modules/navbar/navbar.component";
-import {ImageSliderComponent} from "./modules/list/image-slider/image.slider.component";
+import {ImageSliderComponent} from "./modules/image-slider/image.slider.component";
 import {TruncatePipe} from "./util/app.pipe.truncate";
 
 @NgModule({

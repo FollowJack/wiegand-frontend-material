@@ -57,18 +57,20 @@
         </div>
     </div>-->
     </div>
-
     <div class="row">
-        <pagination-controls (pageChange)="page = $event" id="1"
-                             previousLabel="Zurück"
-                             nextLabel="Vor"
-                             maxSize="5"
-                             directionLinks="true"
-                             autoHide="true" style="text-align: center">
-        </pagination-controls>
-    </div>
-    <div class="row" style="text-align: center" *ngIf="pageItems == 12">
-        <a class="waves-effect waves-teal btn-flat" (click)="showAllVehicles()">Zeig mir alle auf Autos sofort!</a>
+
+        <div class="col s12 l6 m6">
+            <pagination-controls (pageChange)="page = $event" id="1"
+                                 previousLabel="Zurück"
+                                 nextLabel="Vor"
+                                 maxSize="5"
+                                 directionLinks="true"
+                                 autoHide="true" style="text-align: center">
+            </pagination-controls>
+        </div>
+        <div class="col s12 l6 m6" style="text-align: center" *ngIf="pageItems == 12">
+            <a class="waves-effect waves-teal btn-flat" (click)="showAllVehicles()">Zeig mir alle auf Autos sofort!</a>
+        </div>
     </div>
     <!-- cars -->
     <div class="row">
@@ -93,20 +95,26 @@
                     <ul class="">
                         <!--<li class="collection-header"><h4 class="truncate">{{vehicle.brandDescription}}
                             {{vehicle.modelDescription </h4></li>-->
-                       <!--<li class="collection-item"><i class="tiny material-icons">directions_car</i>    {{vehicle.category}}</li>
-                        <li class="collection-item"><i class="tiny material-icons">network_check</i>    {{vehicle.engineSpecifics.power}}kW ({{vehicle.engineSpecifics.ps}} PS)</li>
-                        <li class="collection-item"><i class="tiny material-icons">local_drink</i>    {{vehicle.engineSpecifics.fuelType}}</li>
-                        <li class="collection-item"><i class="tiny material-icons">adjust</i>    {{vehicle.engineSpecifics.gearBox}}</li>
-                        <li class="collection-item"><i class="tiny material-icons">filter_drama</i>     {{vehicle.engineSpecifics.airConditioning}}</li>
-                        <li class="collection-item"><i class="tiny material-icons">local_gas_station</i>    Kombiniert: ca. {{vehicle.engineSpecifics.emissionFuelConsumption}}/100 km
-                            g/km
-                        </li>-->
-                        <li class=""><i class="tiny material-icons">directions_car</i>    {{vehicle.category}}</li>
-                        <li class=""><i class="tiny material-icons">network_check</i>    {{vehicle.engineSpecifics.power}}kW ({{vehicle.engineSpecifics.ps}} PS)</li>
-                        <li class=""><i class="tiny material-icons">local_drink</i>    {{vehicle.engineSpecifics.fuelType}}</li>
-                        <li class=""><i class="tiny material-icons">adjust</i>    {{vehicle.engineSpecifics.gearBox}}</li>
-                        <li class=""><i class="tiny material-icons">filter_drama</i>     {{vehicle.engineSpecifics.airConditioning}}</li>
-                        <li class=""><i class="tiny material-icons">local_gas_station</i>    Komb.: ca. {{vehicle.engineSpecifics.emissionFuelConsumption}}/100 km
+                        <!--<li class="collection-item"><i class="tiny material-icons">directions_car</i>    {{vehicle.category}}</li>
+                         <li class="collection-item"><i class="tiny material-icons">network_check</i>    {{vehicle.engineSpecifics.power}}kW ({{vehicle.engineSpecifics.ps}} PS)</li>
+                         <li class="collection-item"><i class="tiny material-icons">local_drink</i>    {{vehicle.engineSpecifics.fuelType}}</li>
+                         <li class="collection-item"><i class="tiny material-icons">adjust</i>    {{vehicle.engineSpecifics.gearBox}}</li>
+                         <li class="collection-item"><i class="tiny material-icons">filter_drama</i>     {{vehicle.engineSpecifics.airConditioning}}</li>
+                         <li class="collection-item"><i class="tiny material-icons">local_gas_station</i>    Kombiniert: ca. {{vehicle.engineSpecifics.emissionFuelConsumption}}/100 km
+                             g/km
+                         </li>-->
+                        <li class=""><i class="tiny material-icons">directions_car</i> {{vehicle.category}}</li>
+                        <li class=""><i class="tiny material-icons">network_check</i>
+                            {{vehicle.engineSpecifics.power}}kW ({{vehicle.engineSpecifics.ps}} PS)
+                        </li>
+                        <li class=""><i class="tiny material-icons">local_drink</i> {{vehicle.engineSpecifics.fuelType}}
+                        </li>
+                        <li class=""><i class="tiny material-icons">adjust</i> {{vehicle.engineSpecifics.gearBox}}</li>
+                        <li class=""><i class="tiny material-icons">filter_drama</i>
+                            {{vehicle.engineSpecifics.airConditioning}}
+                        </li>
+                        <li class=""><i class="tiny material-icons">local_gas_station</i> Komb.: ca.
+                            {{vehicle.engineSpecifics.emissionFuelConsumption}}/100 km
                             g/km
                         </li>
                         <!--<ul>

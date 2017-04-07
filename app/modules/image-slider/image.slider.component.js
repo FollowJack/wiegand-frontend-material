@@ -17,7 +17,10 @@ var ImageSliderComponent = (function () {
     function ImageSliderComponent(_logger) {
         this._logger = _logger;
         this.images = {
-            headline1: "images/header/6er.jpg"
+            headline1: "images/header/6er.jpg",
+            headline2: "images/car_dealer/DSC_0078.JPG",
+            headline3: "images/car_dealer/DSC_0070.JPG",
+            headline4: "images/car_dealer/DSC_0072.JPG",
         };
         this._logger.debug('ImageSliderComponent - constructor - initialized');
     }
@@ -31,7 +34,7 @@ var ImageSliderComponent = (function () {
     ImageSliderComponent = __decorate([
         core_1.Component({
             selector: 'image-slider-component',
-            templateUrl: 'app/modules/list/image-slider/image.slider.component.html',
+            templateUrl: 'app/modules/image-slider/image.slider.component.html',
         }), 
         __metadata('design:paramtypes', [core_2.Logger])
     ], ImageSliderComponent);
