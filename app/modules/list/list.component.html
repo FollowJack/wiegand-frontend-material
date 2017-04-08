@@ -69,7 +69,7 @@
             </pagination-controls>
         </div>
         <div class="col s12 l6 m6" style="text-align: center" *ngIf="pageItems == 12">
-            <a class="waves-effect waves-teal btn-flat" (click)="showAllVehicles()">Zeig mir alle auf Autos sofort!</a>
+            <a class="waves-effect waves-teal btn-flat" (click)="showAllVehicles()">Zeig mir alle Autos auf sofort!</a>
         </div>
     </div>
     <!-- cars -->
@@ -85,7 +85,7 @@
                 <div class="card-tabs">
 
                     <ul class="tabs tabs-fixed-width">
-                        <li class="tab blue truncate" style="color:white;">
+                        <li class="tab white truncate" style="padding: 0 6px; font-size: 1.2em">
                             {{vehicle.brandDescription}} {{vehicle.modelDescription}}
                         </li>
                     </ul>
@@ -103,17 +103,17 @@
                          <li class="collection-item"><i class="tiny material-icons">local_gas_station</i>    Kombiniert: ca. {{vehicle.engineSpecifics.emissionFuelConsumption}}/100 km
                              g/km
                          </li>-->
-                        <li class=""><i class="tiny material-icons">directions_car</i> {{vehicle.category}}</li>
-                        <li class=""><i class="tiny material-icons">network_check</i>
+                        <li class=""><i class="tiny material-icons left">directions_car</i> {{vehicle.category}}</li>
+                        <li class=""><i class="tiny material-icons left">network_check</i>
                             {{vehicle.engineSpecifics.power}}kW ({{vehicle.engineSpecifics.ps}} PS)
                         </li>
-                        <li class=""><i class="tiny material-icons">local_drink</i> {{vehicle.engineSpecifics.fuelType}}
+                        <li class=""><i class="tiny material-icons left">local_drink</i> {{vehicle.engineSpecifics.fuelType}}
                         </li>
-                        <li class=""><i class="tiny material-icons">adjust</i> {{vehicle.engineSpecifics.gearBox}}</li>
-                        <li class=""><i class="tiny material-icons">filter_drama</i>
+                        <li class=""><i class="tiny material-icons left">adjust</i> {{vehicle.engineSpecifics.gearBox}}</li>
+                        <li class=""><i class="tiny material-icons left">filter_drama</i>
                             {{vehicle.engineSpecifics.airConditioning}}
                         </li>
-                        <li class=""><i class="tiny material-icons">local_gas_station</i> Komb.: ca.
+                        <li class=""><i class="tiny material-icons left">local_gas_station</i> Komb.: ca.
                             {{vehicle.engineSpecifics.emissionFuelConsumption}}/100 km
                             g/km
                         </li>
@@ -142,15 +142,15 @@
                 </div>-->
                 <div class="card-tabs">
                     <ul class="tabs tabs-fixed-width" style="color:white;">
-                        <li class="tab blue lighten-1">
-                            <i class="tiny material-icons">av_timer</i>{{vehicle.engineSpecifics.mileAge | number :
+                        <li class="tab black lighten-1">
+                            <i class="tiny material-icons">av_timer</i> {{vehicle.engineSpecifics.mileAge | number :
                             '1.0-0' }} KM
                         </li>
-                        <li class="tab blue lighten-1">
-                            <i class="tiny material-icons">today</i>EZ {{vehicle.engineSpecifics.firstRegistration |
+                        <li class="tab black lighten-1">
+                            <i class="tiny material-icons">today</i> EZ {{vehicle.engineSpecifics.firstRegistration |
                             date: 'MM/yyyy'}}
                         </li>
-                        <li class="tab blue lighten-1">
+                        <li class="tab black lighten-1">
                             {{vehicle.consumerPriceAmount | number : '1.0-0' }} €
                         </li>
                     </ul>

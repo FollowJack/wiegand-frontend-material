@@ -21,22 +21,14 @@
     </div>
     <!--</div>-->
 
-
-    <!--<div class="slider">
-        <ul class="slides">
-            <li *ngFor="let image of vehicle.vehicleImages">
-                <img [src]="image.xlurl">
-            </li>
-        </ul>
-    </div>-->
     <!--/ header -->
     <div class="row">
-        <div class="offer_gallery">
+        <!--<div class="col l6 m12 s12 offer_gallery">
             <div class="gallery_images">
                 <div id="gallery_images" *ngIf="vehicle.vehicleImages?.length > 0">
                     <div class="gallery_image_item" *ngFor="let image of vehicle.vehicleImages">
 
-                        <img [src]="image.xlurl" alt="">
+                        <img [src]="image.xlurl" alt="" class="responsive-img">
                         <a href="{{image.xlurl}}" rel="prettyPhoto[gal]"></a>
                     </div>
                 </div>
@@ -50,23 +42,20 @@
                 <a href="#" class="next" id="gallery_thumbs_next"></a>
             </div>
 
-            <script>
-
-            </script>
-
-        </div>
+        </div>-->
         <!--<div class="container ">-->
 
 
         <!-- Image carousel -->
-        <!--<div class="carousel col 6l m6 s12">-->
-        <!-- <a class="carousel-item" *ngFor="let image of vehicle.vehicleImages; let i = index">-->
-        <!--<div class="col l6 m6 s12">
-            <a class="col l6 m6 s12" *ngFor="let image of vehicle.vehicleImages; let i = index">
-                <img id="{{i}}" [src]="image.xlurl" (click)="displayImageLarge(i)"  style="max-width: 100%;
-    max-height: 100%;">
-            </a>
-        </div>-->
+        <div class="col l7 m12 s12">
+            <div class="carousel carousel-slider" data-indicators="true">
+                <a class="carousel-item center" *ngFor="let image of vehicle.vehicleImages; let i = index">
+                    <!--<div class="col l6 m6 s12">-->
+                    <img id="{{i}}" [src]="image.xlurl">
+                    <!--</div>-->
+                </a>
+            </div>
+        </div>
 
         <div class="col l5 m12 s12">
             <div>
@@ -74,13 +63,15 @@
                     <tbody>
                     <tr>
                         <td><span class="spec_name">Hubraum:</span></td>
-                        <td class="right-align"><strong class="spec_value">{{vehicle.engineSpecifics.cupicCapacity || "-"}} cm³</strong>
+                        <td class="right-align"><strong class="spec_value">{{vehicle.engineSpecifics.cupicCapacity ||
+                            "-"}} cm³</strong>
                         </td>
                     </tr>
 
                     <tr>
                         <td><span class="spec_name">Anzahl Sitzplätze:</span></td>
-                        <td class="right-align"><strong class="spec_value">{{vehicle.engineSpecifics.numberOfSeats || "-"}}</strong></td>
+                        <td class="right-align"><strong class="spec_value">{{vehicle.engineSpecifics.numberOfSeats ||
+                            "-"}}</strong></td>
                     </tr>
                     <tr>
                         <td><span class="spec_name">Anzahl der Türen:</span>
@@ -250,130 +241,135 @@
     </div>
 
     <!-- details tabs -->
-        <div class="details_tabs">
-            <div id="t_overview" class="tabcontent clearfix">
-                <div class="col col_1_3">
-                    <h3>Innenausstattung</h3>
-                    <ul class="collection">
-                        <li *ngFor='let feature of vehicle.features.featuresInner' class="collection-item">{{feature}}</li>
-                    </ul>
-                </div>
-                <div class="col col_1_3">
-                    <h3>Außenausstattung</h3>
-                    <ul class="collection">
-                        <li *ngFor='let feature of vehicle.features.featuresOuter' class="collection-item">{{feature}}</li>
-                    </ul>
-                </div>
-                <div class="col col_1_3">
-                    <h3>Sicherheit & Umwelt</h3>
-                    <ul class="collection">
-                        <li *ngFor='let feature of vehicle.features.featuresSafety' class="collection-item">{{feature}}</li>
-                    </ul>
-                </div>
+        <div class="row">
+            <div class="col s12 m6 l4">
+                <h4 style="word-break: break-all">Innenausstattung</h4>
+                <ul class="collection">
+                    <li *ngFor='let feature of vehicle.features.featuresInner' class="collection-item">{{feature}}
+                    </li>
+                </ul>
             </div>
-
-            <div id="t_description" class="tabcontent clearfix">
-                <!--<h3>Fahrzeugbeschreibung</h3>
-                <div class="col alpha">
-                  <p>{{vehicle.detailedDescription}}</p>
-                </div>-->
-                <div class="col">
-                    * Weitere Informationen zum offiziellen Kraftstoffverbrauch und zu den offiziellen spezifischen
-                    CO2-Emissionen und gegebenenfalls zum Stromverbrauch neuer Pkw können dem 'Leitfaden über den
-                    offiziellen
-                    Kraftstoffverbrauch, die offiziellen spezifischen CO2-Emissionen und den offiziellen Stromverbrauch
-                    neuer
-                    Pkw' entnommen werden, der an allen Verkaufsstellen und bei der 'Deutschen Automobil Treuhand GmbH'
-                    unentgeltlich erhältlich ist unter www.dat.de.
-                </div>
+            <div class="col s12 m6 l4">
+                <h4 style="word-break: break-all">Außenausstattung</h4>
+                <ul class="collection">
+                    <li *ngFor='let feature of vehicle.features.featuresOuter' class="collection-item">{{feature}}
+                    </li>
+                </ul>
             </div>
-
-            <!-- TODO: SEND EMAIL
-            <div id="t_contacts" class="tabcontent clearfix">
-              <form action="#" class="details_form ajax_form" id="offer_contact">
-                <div class="form_col_1">
-                  <div class="row input_styled inlinelist">
-                    <label class="label_title">Anrede:</label>
-                    <input type="radio" name="title" value="mrs" id="mrs" checked> <label for="mrs">Mrs.</label>
-                    <input type="radio" name="title" value="mr" id="mr"> <label for="mr">Mr.</label>
-                    <input type="radio" name="title" value="company" id="company"> <label for="company">Company</label>
-                  </div>
-                  <div class="row">
-                    <label class="label_title">Deinen vollen Namen:</label>
-                    <input type="text" name="yourname" id="name" class="inputField required" value="">
-                  </div>
-                  <div class="row">
-                    <label class="label_title">Deine E-Mail Adresse:</label>
-                    <input type="text" name="email" id="email" class="inputField required" value="">
-                  </div>
-                </div>
-                <!--/ form col 1 -->
-            <!--<div class="form_col_2">
-              <div class="row">
-                <label class="label_title">Nachricht:</label>
-                <textarea rows="4" cols="5" name="message" id="message" class="textareaField required"></textarea>
-              </div>
-              <div class="row rowSubmit">
-                <a href="#" class="link_reset" onclick="document.getElementById('offer_contact').reset();return false">Setze alle Kontaktfelder zurück</a>
-                <input type="submit" value="SEND MESSAGE" id="send" class="btn_send">
-              </div>
+            <div class="col s12 m6 l4">
+                <h4>Sicherheit & Umwelt</h4>
+                <ul class="collection">
+                    <li *ngFor='let feature of vehicle.features.featuresSafety' class="collection-item">
+                        {{feature}}
+                    </li>
+                </ul>
             </div>
-            <!--/ form col 2 -->
-
-            <!--</form>
-          </div>
-
-          <div id="t_send" class="tabcontent clearfix feedback_ajax_form">
-            <form action="#" class="details_form" id="offer_send_friend">
-              <div class="form_col_1">
-                <div class="row">
-                  <label class="label_title">Your Email Address:</label>
-                  <input type="text" name="email_from" name="email_from" class="inputField required" value="">
-                </div>
-                <div class="row">
-                  <label class="label_title">Your Friend’s Email Address:</label>
-                  <input type="text" name="email" id="email_f" class="inputField required" value="">
-                </div>
-              </div>
-              <!--/ form col 1 -->
-            <!--<div class="form_col_2 col_thin">
-              <div class="row">
-                <label class="label_title">Message:</label>
-                <textarea rows="4" cols="5" name="message" name="message_f" class="textareaField required">Check out this cool car:
-    http://mobile.de/auto-inserat/mercedes-benz-ml-63</textarea>
-              </div>
-              <div class="row rowSubmit">
-                <a href="#" class="link_reset" onclick="document.getElementById('offer_send_friend').reset();return false">Reset All Form Fields</a>
-                <input type="submit" value="SEND MESSAGE" id="send_f" class="btn_send">
-              </div>
-            </div>
-            <!--/ form col 2 -->
-            <!--<div class="form_col_3">
-              <div class="row">
-                <label class="label_title">Share on:</label>
-                <a href="#" class="btn_share"><img src="images/btn_share_tweet.png" alt=""></a>
-                <a href="#" class="btn_share"><img src="images/btn_share_like.png" alt=""></a>
-                <a href="#" class="btn_share"><img src="images/btn_share_g1.png" alt=""></a>
-              </div>
-            </div>
-            <!--/ form col 3 -->
-
-            <!--  </form>
-            </div>
-          </div>
-          <!--/ details tabs -->
-
-            <div class="text_box">
-                <p>
-                    <a href="tel:+49 6204 6080716"
-                       class="btn btn_big btn_white"><span>Ruf an: <strong>+49 6204 6080716</strong></span></a>
-                    <span class="btn btn_big btn_orange" (click)="onEmailSelect()"
-                          onclick="window.prompt('Kopieren in die Zwischenablage: Strg+C, Eingabetaste', 'WIEGAND-AUTOMOBILE@MOBILE.DE');">
-                       <span>WIEGAND-AUTOMOBILE@MOBILE.DE</span></span>
-
-                </p>
-            </div>
-
         </div>
-        <!--/ content -->
+        <div class="row">
+
+            <!--<h3>Fahrzeugbeschreibung</h3>
+            <div class="col alpha">
+              <p>{{vehicle.detailedDescription}}</p>
+            </div>-->
+            <div class="col s12 m12 l12 section" style="font-weight: 200; font-size: .9em;">
+                * Weitere Informationen zum offiziellen Kraftstoffverbrauch und zu den offiziellen spezifischen
+                CO2-Emissionen und gegebenenfalls zum Stromverbrauch neuer Pkw können dem 'Leitfaden über den
+                offiziellen
+                Kraftstoffverbrauch, die offiziellen spezifischen CO2-Emissionen und den offiziellen Stromverbrauch
+                neuer
+                Pkw' entnommen werden, der an allen Verkaufsstellen und bei der 'Deutschen Automobil Treuhand GmbH'
+                unentgeltlich erhältlich ist unter www.dat.de.
+            </div>
+        </div>
+
+        <!-- TODO: SEND EMAIL
+        <div id="t_contacts" class="tabcontent clearfix">
+          <form action="#" class="details_form ajax_form" id="offer_contact">
+            <div class="form_col_1">
+              <div class="row input_styled inlinelist">
+                <label class="label_title">Anrede:</label>
+                <input type="radio" name="title" value="mrs" id="mrs" checked> <label for="mrs">Mrs.</label>
+                <input type="radio" name="title" value="mr" id="mr"> <label for="mr">Mr.</label>
+                <input type="radio" name="title" value="company" id="company"> <label for="company">Company</label>
+              </div>
+              <div class="row">
+                <label class="label_title">Deinen vollen Namen:</label>
+                <input type="text" name="yourname" id="name" class="inputField required" value="">
+              </div>
+              <div class="row">
+                <label class="label_title">Deine E-Mail Adresse:</label>
+                <input type="text" name="email" id="email" class="inputField required" value="">
+              </div>
+            </div>
+            <!--/ form col 1 -->
+        <!--<div class="form_col_2">
+          <div class="row">
+            <label class="label_title">Nachricht:</label>
+            <textarea rows="4" cols="5" name="message" id="message" class="textareaField required"></textarea>
+          </div>
+          <div class="row rowSubmit">
+            <a href="#" class="link_reset" onclick="document.getElementById('offer_contact').reset();return false">Setze alle Kontaktfelder zurück</a>
+            <input type="submit" value="SEND MESSAGE" id="send" class="btn_send">
+          </div>
+        </div>
+        <!--/ form col 2 -->
+
+        <!--</form>
+      </div>
+
+      <div id="t_send" class="tabcontent clearfix feedback_ajax_form">
+        <form action="#" class="details_form" id="offer_send_friend">
+          <div class="form_col_1">
+            <div class="row">
+              <label class="label_title">Your Email Address:</label>
+              <input type="text" name="email_from" name="email_from" class="inputField required" value="">
+            </div>
+            <div class="row">
+              <label class="label_title">Your Friend’s Email Address:</label>
+              <input type="text" name="email" id="email_f" class="inputField required" value="">
+            </div>
+          </div>
+          <!--/ form col 1 -->
+        <!--<div class="form_col_2 col_thin">
+          <div class="row">
+            <label class="label_title">Message:</label>
+            <textarea rows="4" cols="5" name="message" name="message_f" class="textareaField required">Check out this cool car:
+http://mobile.de/auto-inserat/mercedes-benz-ml-63</textarea>
+          </div>
+          <div class="row rowSubmit">
+            <a href="#" class="link_reset" onclick="document.getElementById('offer_send_friend').reset();return false">Reset All Form Fields</a>
+            <input type="submit" value="SEND MESSAGE" id="send_f" class="btn_send">
+          </div>
+        </div>
+        <!--/ form col 2 -->
+        <!--<div class="form_col_3">
+          <div class="row">
+            <label class="label_title">Share on:</label>
+            <a href="#" class="btn_share"><img src="images/btn_share_tweet.png" alt=""></a>
+            <a href="#" class="btn_share"><img src="images/btn_share_like.png" alt=""></a>
+            <a href="#" class="btn_share"><img src="images/btn_share_g1.png" alt=""></a>
+          </div>
+        </div>
+        <!--/ form col 3 -->
+
+        <!--  </form>
+        </div>
+      </div>
+      <!--/ details tabs -->
+
     </div>
+    <div class="row">
+        <div class="col s12 m6 l6 center-align">
+            <a href="tel:+49 6204 6080716"
+               class="waves-effect waves-light btn blue">
+                <i class="large material-icons left">phone</i><span>Ruf an: <strong>+49 6204 6080716</strong></span></a>
+        </div>
+        <div class="col s12 m6 l6 center-align">
+            <span class="waves-effect waves-light btn blue" (click)="onEmailSelect()"
+                  onclick="window.prompt('Kopieren in die Zwischenablage: Strg+C, Eingabetaste', 'WIEGAND-AUTOMOBILE@MOBILE.DE');">
+                       <i class="large material-icons left">email</i><span>WIEGAND-AUTOMOBILE@MOBILE.DE</span></span>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>

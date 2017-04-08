@@ -41,28 +41,26 @@ export class DetailComponent implements AfterViewChecked {
     }
 
     ngAfterViewChecked() {
-        if ($('#gallery_thumbs').children().length <= 0) {
+        if ($('.carousel').children().length <= 0) {
             return;
         }
 
         //this._logger.debug('DetailComponent - ngAfterViewChecked - initialized');
 
         if (!this.isGalleryLoaded) {
+            this._logger.debug('DetailComponent - ngAfterViewChecked - slider initialized');
             this.loadVehicleGallery();
+
             this.isGalleryLoaded = true;
         }
-
-
-        /*if ($('.slides').children().length <= 0) {
+        /*if ($('#gallery_thumbs').children().length <= 0) {
          return;
          }
 
          //this._logger.debug('DetailComponent - ngAfterViewChecked - initialized');
 
          if (!this.isGalleryLoaded) {
-         this._logger.debug('DetailComponent - ngAfterViewChecked - materialbox');
          this.loadVehicleGallery();
-
          this.isGalleryLoaded = true;
          }*/
     }
@@ -116,46 +114,46 @@ export class DetailComponent implements AfterViewChecked {
     }
 
     private loadVehicleGallery() {
+        $('.carousel').carousel({full_width: true});
         //this._logger.debug('ImageSliderComponent - loadSlider - initialized');
-        /*$('.slider').slider({full_width: true});*/
-        $('#gallery_thumbs').children().each(function (i: any) {
-            $(this).addClass('itm' + i);
-            $(this).click(function () {
-                $('#gallery_images').trigger('slideTo', [i, 0, true]);
-                $('#gallery_thumbs a').removeClass('selected');
-                $(this).addClass('selected');
-                return false;
-            });
-        });
-        $('#gallery_thumbs a.itm0').addClass('selected');
-        $('#gallery_images').carouFredSel({
-            infinite: false,
-            circular: false,
-            auto: false,
-            width: '100%',
-            scroll: {
-                items: 1,
-                fx: "crossfade"
-            }
-        });
-        $('#gallery_thumbs').carouFredSel({
-            prev: "#gallery_thumbs_prev",
-            next: "#gallery_thumbs_next",
-            infinite: false,
-            circular: false,
-            auto: false,
-            width: '100%',
-            scroll: {
-                items: 1
-            }
-        });
-        //activate pretty photo viewer
-        //this._logger.debug("DetailComponent - loadVehicleGallery - prettyphoto loaded");
-        $("a[rel^='prettyPhoto[gal]']").prettyPhoto({
-            social_tools: false,
-            deeplinking: false
-        });//{theme:'facebook'}
-
+        /*$('#gallery_thumbs').children().each(function (i: any) {
+         $(this).addClass('itm' + i);
+         $(this).click(function () {
+         $('#gallery_images').trigger('slideTo', [i, 0, true]);
+         $('#gallery_thumbs a').removeClass('selected');
+         $(this).addClass('selected');
+         return false;
+         });
+         });
+         $('#gallery_thumbs a.itm0').addClass('selected');
+         $('#gallery_images').carouFredSel({
+         infinite: false,
+         circular: false,
+         auto: false,
+         width: '100%',
+         scroll: {
+         items: 1,
+         fx: "crossfade"
+         }
+         });
+         $('#gallery_thumbs').carouFredSel({
+         prev: "#gallery_thumbs_prev",
+         next: "#gallery_thumbs_next",
+         infinite: false,
+         circular: false,
+         auto: false,
+         width: '100%',
+         scroll: {
+         items: 1
+         }
+         });
+         //activate pretty photo viewer
+         //this._logger.debug("DetailComponent - loadVehicleGallery - prettyphoto loaded");
+         $("a[rel^='prettyPhoto[gal]']").prettyPhoto({
+         social_tools: false,
+         deeplinking: false
+         });//{theme:'facebook'}
+         */
     }
 }
 
