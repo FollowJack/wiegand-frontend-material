@@ -16,6 +16,11 @@ declare var google: any;
 
 export class LocationComponent implements AfterViewInit {
 
+  private images = {
+    contact : "images/header/6er.jpg",
+    logo : "images/logo/WiegandAutomobile.png"
+  };
+
   constructor(private _logger: Logger) {
     this._logger.debug('LocationComponent - constructor - initialized');
   }
@@ -40,8 +45,6 @@ export class LocationComponent implements AfterViewInit {
       scrollwheel: false
     });
 
-    $("a[rel^='prettyPhoto[location]']").prettyPhoto({social_tools: false,
-      deeplinking: false});//{theme:'facebook'}
   }
 
 

@@ -11,6 +11,10 @@ import {Logger} from 'angular2-logger/core';
 
 export class ImprintComponent{
 
+  private images = {
+    logo : "images/logo/WiegandAutomobile.png"
+  };
+
   constructor(private _logger: Logger) {
     this._logger.debug('ImprintComponent - constructor - initialized');
   }

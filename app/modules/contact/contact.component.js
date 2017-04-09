@@ -20,6 +20,10 @@ var ContactComponent = (function () {
         this._logger = _logger;
         this._route = _route;
         this._service = _service;
+        this.images = {
+            contact: "images/header/6er.jpg",
+            logo: "images/logo/WiegandAutomobile.png"
+        };
         this._logger.debug('ContactComponent - constructor - initialized');
     }
     ContactComponent.prototype.ngAfterViewInit = function () {

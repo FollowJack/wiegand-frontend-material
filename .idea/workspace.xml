@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="242b6f94-c989-455c-abde-bfebcb8856a8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/google-maps/jquery.gmap.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/contact/contact.component.html" afterPath="$PROJECT_DIR$/app/modules/contact/contact.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/contact/contact.component.js" afterPath="$PROJECT_DIR$/app/modules/contact/contact.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/contact/contact.component.js.map" afterPath="$PROJECT_DIR$/app/modules/contact/contact.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/contact/contact.component.ts" afterPath="$PROJECT_DIR$/app/modules/contact/contact.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/detail/detail.component.html" afterPath="$PROJECT_DIR$/app/modules/detail/detail.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/detail/detail.component.js" afterPath="$PROJECT_DIR$/app/modules/detail/detail.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/detail/detail.component.js.map" afterPath="$PROJECT_DIR$/app/modules/detail/detail.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/detail/detail.component.ts" afterPath="$PROJECT_DIR$/app/modules/detail/detail.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/image-slider/image.slider.component.html" afterPath="$PROJECT_DIR$/app/modules/image-slider/image.slider.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/list/list.component.html" afterPath="$PROJECT_DIR$/app/modules/list/list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/navbar/navbar.component.html" afterPath="$PROJECT_DIR$/app/modules/navbar/navbar.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/imprint/imprint.component.html" afterPath="$PROJECT_DIR$/app/modules/imprint/imprint.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/imprint/imprint.component.js" afterPath="$PROJECT_DIR$/app/modules/imprint/imprint.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/imprint/imprint.component.js.map" afterPath="$PROJECT_DIR$/app/modules/imprint/imprint.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/imprint/imprint.component.ts" afterPath="$PROJECT_DIR$/app/modules/imprint/imprint.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/location/location.component.html" afterPath="$PROJECT_DIR$/app/modules/location/location.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/location/location.component.js" afterPath="$PROJECT_DIR$/app/modules/location/location.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/location/location.component.js.map" afterPath="$PROJECT_DIR$/app/modules/location/location.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/location/location.component.ts" afterPath="$PROJECT_DIR$/app/modules/location/location.component.ts" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,43 +41,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="detail.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/modules/detail/detail.component.ts">
+      <file leaf-file-name="location.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/modules/location/location.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/modules/list/list.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="149" column="69" lean-forward="false" selection-start-line="149" selection-start-column="69" selection-end-line="149" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="99" column="17" lean-forward="false" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+            <state relative-caret-position="165">
+              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
               <folding>
-                <marker date="1491656662000" expanded="true" signature="1372:1418" ph="/*...*/" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="imprint.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/modules/imprint/imprint.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="72" column="28" lean-forward="false" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+            <state relative-caret-position="357">
+              <caret line="29" column="4" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imprint.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/modules/imprint/imprint.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="location.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/modules/location/location.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="21" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -112,10 +115,11 @@
       <find>zeig</find>
       <find>flo</find>
       <find>offer</find>
-      <find>heigh</find>
       <find>styl</find>
-      <find>icon</find>
       <find>loadVehicleGallery</find>
+      <find>icon</find>
+      <find>heigh</find>
+      <find>src</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -163,9 +167,15 @@
         <option value="$PROJECT_DIR$/app/modules/image-slider/image.slider.component.html" />
         <option value="$PROJECT_DIR$/app/modules/detail/detail.component.ts" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/app/modules/detail/detail.component.html" />
         <option value="$PROJECT_DIR$/app/modules/list/list.component.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app/modules/detail/detail.component.html" />
+        <option value="$PROJECT_DIR$/app/modules/contact/contact.component.ts" />
+        <option value="$PROJECT_DIR$/app/modules/contact/contact.component.html" />
+        <option value="$PROJECT_DIR$/app/modules/location/location.component.ts" />
+        <option value="$PROJECT_DIR$/app/modules/location/location.component.html" />
+        <option value="$PROJECT_DIR$/app/modules/imprint/imprint.component.ts" />
+        <option value="$PROJECT_DIR$/app/modules/imprint/imprint.component.html" />
       </list>
     </option>
   </component>
@@ -260,6 +270,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="carousel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wiegand-frontend-material" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wiegand-frontend-material" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wiegand-frontend-material" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wiegand-frontend-material" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -390,7 +432,7 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="list&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/list/list.component.html&#10;detail&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/detail/detail.component.ts&#10;style&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/css/style.css&#10;nav&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/navbar/navbar.component.html&#10;sty&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/css/style.css&#10;ima&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/image-slider/image.slider.component.html&#10;detai&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/detail/detail.component.ts&#10;conta&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/contact/contact.component.html&#10;cont&#9;null&#9;null&#10;imprin&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/imprint/imprint.component.html&#10;navbar&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/navbar/navbar.component.html&#10;na&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/navbar/navbar.component.ts&#10;app&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/app.component.ts&#10;deta&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/detail/detail.component.ts&#10;app.com&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/app.component.ts&#10;app.&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/app.component.ts&#10;app.co&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/app.component.html&#10;styl&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/css/style.css&#10;image&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/list/image-slider/image.slider.component.html" />
+    <property name="SearchEverywhereHistoryKey" value="locat&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/location/location.component.ts&#10;impr&#9;null&#9;null&#10;imp&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/imprint/imprint.component.html&#10;loc&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/location/location.component.html&#10;loca&#9;null&#9;null&#10;det&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/detail/detail.component.html&#10;c&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/contact/contact.component.ts&#10;deta&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/detail/detail.component.html&#10;de&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/detail/detail.component.html&#10;cont&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/contact/contact.component.ts&#10;list&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/list/list.component.html&#10;detail&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/detail/detail.component.ts&#10;style&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/css/style.css&#10;nav&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/navbar/navbar.component.html&#10;sty&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/css/style.css&#10;ima&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/image-slider/image.slider.component.html&#10;detai&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/detail/detail.component.ts&#10;conta&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/contact/contact.component.html&#10;imprin&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/imprint/imprint.component.html&#10;navbar&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/navbar/navbar.component.html&#10;na&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/navbar/navbar.component.ts&#10;app&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/app.component.ts&#10;app.com&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/app.component.ts&#10;app.&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/app.component.ts&#10;app.co&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/app.component.html&#10;styl&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/css/style.css&#10;image&#9;FILE&#9;file:///Users/denielhorvatic/Documents/00_Projects/Angular2/wiegand_frontend_material/wiegand-frontend-material/app/modules/list/image-slider/image.slider.component.html" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1015,12 +1057,12 @@
       <workItem from="1490650610364" duration="3961000" />
       <workItem from="1490805996246" duration="5059000" />
       <workItem from="1491422687660" duration="10372000" />
-      <workItem from="1491641035986" duration="9264000" />
+      <workItem from="1491641035986" duration="12006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60078000" />
+    <option name="totallyTimeSpent" value="62820000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1046,7 +1088,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1119,47 +1161,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/modules/image-slider/image.slider.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/list/list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#pagination-controls#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="50" column="55" lean-forward="true" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/navbar/navbar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/navbar/navbar.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1337,27 +1338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/imprint/imprint.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/contact/contact.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/contact/contact.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1464,33 +1444,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/lib/google-maps/jquery.gmap.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="99" column="17" lean-forward="false" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
-          <folding>
-            <marker date="1491656662000" expanded="true" signature="1372:1418" ph="/*...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/detail/detail.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="364" column="26" lean-forward="true" selection-start-line="364" selection-start-column="26" selection-end-line="364" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#2;n#div#1;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h4#0;n#div#1;n#div#2;n#div#1;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#1;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="8" column="610" lean-forward="true" selection-start-line="8" selection-start-column="610" selection-end-line="8" selection-end-column="610" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/detail/detail.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="142">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1503,18 +1468,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/google-maps/jquery.gmap.min.js">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="8" column="610" lean-forward="true" selection-start-line="8" selection-start-column="610" selection-end-line="8" selection-end-column="610" />
-          <folding />
+        <state relative-caret-position="283">
+          <caret line="99" column="17" lean-forward="false" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+          <folding>
+            <marker date="1491656662000" expanded="true" signature="1372:1418" ph="/*...*/" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="72" column="28" lean-forward="false" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+        <state relative-caret-position="205">
+          <caret line="67" column="20" lean-forward="false" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/logo/Wiegand_Automobile.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/logo/WiegandAutomobile.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/detail/detail.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="378" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="378" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/contact/contact.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/contact/contact.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/location/location.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/location/location.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="21" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/imprint/imprint.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/imprint/imprint.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="4" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
           <folding />
         </state>
       </provider>

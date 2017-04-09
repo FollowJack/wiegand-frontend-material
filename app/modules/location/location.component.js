@@ -16,6 +16,10 @@ var core_2 = require('angular2-logger/core');
 var LocationComponent = (function () {
     function LocationComponent(_logger) {
         this._logger = _logger;
+        this.images = {
+            contact: "images/header/6er.jpg",
+            logo: "images/logo/WiegandAutomobile.png"
+        };
         this._logger.debug('LocationComponent - constructor - initialized');
     }
     LocationComponent.prototype.ngAfterViewInit = function () {
@@ -30,8 +34,6 @@ var LocationComponent = (function () {
             zoom: 12,
             scrollwheel: false
         });
-        $("a[rel^='prettyPhoto[location]']").prettyPhoto({ social_tools: false,
-            deeplinking: false }); //{theme:'facebook'}
     };
     LocationComponent = __decorate([
         core_1.Component({

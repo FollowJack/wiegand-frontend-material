@@ -16,6 +16,9 @@ var core_2 = require('angular2-logger/core');
 var ImprintComponent = (function () {
     function ImprintComponent(_logger) {
         this._logger = _logger;
+        this.images = {
+            logo: "images/logo/WiegandAutomobile.png"
+        };
         this._logger.debug('ImprintComponent - constructor - initialized');
     }
     ImprintComponent = __decorate([

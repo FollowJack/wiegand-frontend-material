@@ -15,6 +15,11 @@ declare let $: any;
 
 export class ContactComponent implements AfterViewInit {
 
+  private images = {
+    contact : "images/header/6er.jpg",
+    logo : "images/logo/WiegandAutomobile.png"
+  };
+
   constructor(private _logger: Logger,
               private _route: ActivatedRoute,
               private _service: VehicleService) {
